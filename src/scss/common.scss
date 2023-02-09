@@ -1,1 +1,80 @@
 // Заголовки, загальні БЕМ блоки та інше...
+section {
+	@include adaptiveValue('padding-top', 100, 50);
+	@include adaptiveValue('padding-bottom', 100, 50);
+}
+
+.page {
+	@include adaptiveValue('padding-top', 100, 50);
+}
+
+._title {
+	@include adaptiveValue('font-size', 48, 30);
+	@include adaptiveValue('margin-bottom', 50, 30);
+	line-height: math.div(58, 48);
+	text-align: center;
+	font-weight: 500;
+}
+
+.catalog {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	opacity: 0;
+	visibility: hidden;
+	&._active {
+		opacity: 1;
+		visibility: visible;
+	}
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: rem(100);
+		padding-top: rem(9);
+	}
+	&__head-title {
+		font-size: rem(30);
+	}
+	.tabs-catalog {
+		display: flex;
+		padding-bottom: rem(50);
+		&__navigation {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: rem(50);
+			border-right: 1px solid $redColor;
+			padding-right: rem(40);
+			margin-right: rem(40);
+			flex: 0 1 rem(700);
+		}
+		&__title {
+			font-size: rem(26);
+			&._tab-active {
+				color: $redColor;
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $redColor;
+				}
+			}
+		}
+	}
+	.tabs {
+		&__content {
+			flex: 0 1 rem(700);
+		}
+		&__body-list {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: rem(30);
+			margin-bottom: rem(30);
+		}
+		&__body-item {
+			font-size: rem(26);
+		}
+	}
+}

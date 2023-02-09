@@ -1,9 +1,9 @@
-import fs from 'fs';
-import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CopyPlugin from "copy-webpack-plugin";
+import CopyPlugin from "copy-webpack-plugin"
+import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
+import fs from 'fs'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-import * as path from 'path';
+import * as path from 'path'
 
 const srcFolder = "src";
 const builFolder = "dist";

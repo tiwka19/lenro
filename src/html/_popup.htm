@@ -1,10 +1,19 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="productForm" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
+		<form class="popup__content">
+			<div class="popup__title">Название модели</div>
+			<div class="popup__body">
+				<div class="popup__input-group">
+					<label for="name" class="popup__label">Ваше имя</label>
+					<input autocomplete="off" type="text" name="form[]" id='name' placeholder="Введите ваше имя " class="input">
+				</div>
+				<div class="popup__input-group">
+					<label for="email" class="popup__label">Ваш еmail</label>
+					<input autocomplete="off" type="email" id='email' name="form[]" placeholder="Введите ваше имя " class="input">
+				</div>
+				<button type="submit" class="popup__button">Отправить</button>
+				<div class="popup__description">Оставляя заявку, Вы даете согласие на обработку своих персональных данных.</div>
 			</div>
-		</div>
+		</form>
 	</div>
 </div>

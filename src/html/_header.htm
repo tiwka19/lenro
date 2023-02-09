@@ -1,4 +1,117 @@
 <header class="header">
-	<div class="header__container">
+	<div class="header__container-big">
+		<button type="button" class="menu__icon icon-menu"><span></span></button>
+		<a href="/" class="header__logo"><img src="@img/logo.png" alt="logo"></a>
+		<div class="header__menu menu">
+			<nav class="menu__body">
+				<ul class="menu__list" data-spollers='992'>
+					<li class="menu__item menu__item--catalog menu-catalog">
+						<button class="menu__link menu-catalog__button" data-spoller>
+							<svg width="24" height="15" viewBox="0 0 24 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path d="M1 1H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M1 8H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+								<path d="M1 14H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+							</svg>
+							КАТАЛОГ
+							<span class='menu-catalog__arrow'>
+								<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+									stroke="currentColor" class="w-6 h-6">
+									<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+								</svg>
+							</span>
+						</button>
+						<div class="menu-catalog__body">
+							<div class="menu-catalog__body-item">
+								<div class="menu-catalog__title">МЕМБРАННЫЕ ЭЛЕМЕНТЫ</div>
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__list-item">Мембранные
+										элементы Hydranautics</li>
+									<li class="menu-catalog__list-item">Мембранные
+										элементы LG</li>
+									<li class="menu-catalog__list-item">Взаимозаменяемость мембран</li>
+									<li class="menu-catalog__list-item">Мембранные
+										элементы KeenSen</li>
+								</ul>
+							</div>
+							<div class="menu-catalog__body-item">
+								<div class="menu-catalog__title">УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ</div>
+								<ul class="menu-catalog__list">
+									<li class="menu-catalog__list-item">Категория #1</li>
+									<li class="menu-catalog__list-item">Категория #2</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+					<li class="menu__item"><a href="#" class="menu__link">УСЛУГИ</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">РЕШЕНИЯ</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">НОВОСТИ</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">О НАС</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">КОНТАКТЫ</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="header__callback">
+			<span class="header__callback-heading">Звонки по России бесплатно</span>
+			<a href="tel:88002502360" class="header__callback-title">8 800 250-23-60</a>
+			<a href="tel:88002502360" class="header__callback-link">Заказать звонок</a>
+		</div>
+
+		<button class="header__search">
+			<img src="@img/search.svg" alt="search" width='30px'>
+		</button>
+
+
+		<div class="header__catalog catalog">
+			<div class="catalog__container-big">
+				<div class="catalog__head">
+					<a href="/" class="header__logo"><img src="@img/logo.png" alt="logo"></a>
+					<div class="catalog__head-title">Меню каталога</div>
+					<button class="catalog__head-button">
+						<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M29.5 1L15.25 15M1 29L15.25 15M15.25 15L1 1L29.5 29" stroke="black" />
+						</svg>
+					</button>
+				</div>
+				<div class="catalog__body">
+					<div data-tabs class="tabs tabs-catalog">
+						<nav data-tabs-titles class="tabs-catalog__navigation">
+							<button type="button" class="tabs-catalog__title _tab-active">МЕМБРАННЫЕ ЭЛЕМЕНТЫ</button>
+							<button type="button" class="tabs-catalog__title">УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ</button>
+							<button type="button" class="tabs-catalog__title">ХИМИЧЕСКИЕ РЕАГЕНТЫ</button>
+							<!-- <button type="button" class="tabs-catalog__title">ГОТОВЫЕ СИСТЕМЫ</button> -->
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body">
+								<ul class='tabs__body-list'>
+									<li class='tabs__body-item'> Мембранные элементы Hydranautics</li>
+									<li class='tabs__body-item'> Мембранны элементы LG</li>
+									<li class='tabs__body-item'> Взаимозаменяемость мембран</li>
+									<li class='tabs__body-item'> Мембранные элементы KeenSen</li>
+								</ul>
+							</div>
+							<div class="tabs__body">
+								<ul class='tabs__body-list'>
+									<li class='tabs__body-item'> 2Мембранные элементы Hydranautics</li>
+									<li class='tabs__body-item'> Мембранны элементы LG</li>
+									<li class='tabs__body-item'> Взаимозаменяемость мембран</li>
+									<li class='tabs__body-item'> Мембранные элементы KeenSen</li>
+								</ul>
+							</div>
+							<div class="tabs__body">
+								<ul class='tabs__body-list'>
+									<li class='tabs__body-item'> 3Мембранные элементы Hydranautics</li>
+									<li class='tabs__body-item'> Мембранны элементы LG</li>
+									<li class='tabs__body-item'> Взаимозаменяемость мембран</li>
+									<li class='tabs__body-item'> Мембранные элементы KeenSen</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 </header>

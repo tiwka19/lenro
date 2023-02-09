@@ -1,15 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="hero" id="hero">
+				<div class="hero__container-big">
+					<div class="hero__slider-wrapper">
+						<div class="hero__slider swiper">
+							<div class="hero__wrapper swiper-wrapper">
+								<div class="hero__slide swiper-slide">
+									<div class="hero__slider-wrapper">
+										<div class="hero__slide-image">
+											<img src="@img/slider-1.png" alt="slide image">
+										</div>
+										<div class="hero__slide-content">
+											<div class="hero__slide-title">
+												Производство установок обратного осмоса
+											</div>
+											<div class="hero__slide-description">
+												Разработка и внедрение систем комплексной подготовки воды для технологических, питьевых,
+												хозяйственно-бытовых и других нужд предприятий и частных лиц.
+											</div>
+											<button class="hero__slide-button">Заказать</button>
+										</div>
+									</div>
+								</div>
+								<div class="hero__slide swiper-slide">
+									<div class="hero__slider-wrapper">
+										<div class="hero__slide-image">
+											<img src="@img/slider-1.png" alt="slide image">
+										</div>
+										<div class="hero__slide-content">
+											<div class="hero__slide-title">
+												Производство установок обратного осмоса
+											</div>
+											<div class="hero__slide-description">
+												Разработка и внедрение систем комплексной подготовки воды для технологических, питьевых,
+												хозяйственно-бытовых и других нужд предприятий и частных лиц.
+											</div>
+											<button class="hero__slide-button">Заказать</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hero__slider-button">
+							<button type="button" class="hero__slider-prev">
+								<svg width="20" height="29" viewBox="0 0 20 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 2L3 14.5L18 27" stroke="white" stroke-width="3" stroke-linecap="round" />
+								</svg>
+							</button>
+							<button type="button" class="hero__slider-next">
+								<svg width="20" height="29" viewBox="0 0 20 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2 2L17 14.5L2 27" stroke="white" stroke-width="3" stroke-linecap="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section about" id="about">
+				<div class="abount__container">
+					<h2 class="about__title _title">Информация о нас</h2>
+					<div data-tabs class="about-tabs">
+						<nav data-tabs-titles class="about-tabs__navigation">
+							<button type="button" class="about-tabs__title _tab-active">Компетенции</button>
+							<button type="button" class="about-tabs__title">Производство</button>
+							<button type="button" class="about-tabs__title">Партнеры</button>
+							<button type="button" class="about-tabs__title">Проекты</button>
+						</nav>
+						<div data-tabs-body class="about-tabs__content">
+							<div class="about-tabs__body">
+								<div class="about-tabs__body-wrapper">
+									<p class="about-tabs__text">
+										Компания ЛЕНРО более 15 лет специализируется на разработке и производстве систем водоподготовки с
+										использованием современных мембранных технологических решений для промышленных предприятий и частных
+										домов.
+									</p>
+									<div class="about-tabs__image">
+										<img src="@img/about-tab-image.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="about-tabs__body">
+								<div class="about-tabs__body-wrapper">
+									<p class="about-tabs__text">
+										Описание производства
+									</p>
+									<div class="about-tabs__image">
+										<img src="@img/about-tab-image.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="about-tabs__body">
+								<div class="about-tabs__body-wrapper">
+									<p class="about-tabs__text">
+										Описание партнеров
+									</p>
+									<div class="about-tabs__image">
+										<img src="@img/about-tab-image.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="about-tabs__body">
+								<div class="about-tabs__body-wrapper">
+									<p class="about-tabs__text">
+										Описание проектов
+									</p>
+									<div class="about-tabs__image">
+										<img src="@img/about-tab-image.png" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="news" id="news">
+				<div class="news__container-big">
+					<h2 class="news__title _title">Свежие новости</h2>
+					@@include('components/news.htm',{})
+				</div>
+			</section>
+			<section class="solutions" id="solutuions">
+				<div class="solutions__container-big">
+					<h2 class="solutions__title _title">Решения под каждую отрасль </h2>
+					<div class="solutions__content">
+						<div class="solutions__wrapper">
+							<div class="solutions__data">
+								<h3 class="solutions__data-title">Пищевое производство</h3>
+								<p class="solutions__data-text">Чистая качественная вода имеет колоссальное значение в пищевой
+									промышленности. Она востребована при производстве товаров, хозяйственного-бытовом использовании, мытье
+									технических емкостей и приборов и не только. От правильной подготовки исходной воды зависит конечное
+									качество выпускаемой продукции.</p>
+								<div class="solutions__data-more" data-showmore>
+									<h4>Какие проблемы грозят при использовании неочищенной воды: </h4>
+									<ul class='solutions__data-more-list'>
+										<li class="solutions__data-more-item">
+											<strong>Возникновение известковых отложений в трубах</strong> , которые могут спровоцировать
+											поломки и выход из
+											строя
+											оборудования. Также повышенная жесткость приводит к выпадению осадка и ухудшению вкусовых качеств
+											напитков.
+										</li>
+										<li class="solutions__data-more-item">
+											<strong>Оседание железа</strong>, которое загрязняет оборудование и внутренние стенки
+											трубопроводов. Из-за этого
+											развивается микрофлора, ухудшается качество конечной продукции как по цвету, так и по вкусу, а
+											также
+											увеличивается расход моющих средств.
+										</li>
+										<li class="solutions__data-more-item">
+											<strong>Вероятность биологического заражения</strong>, о чем свидетельствуют повышенные значения
+											перманганатной
+											окисляемости и органических веществ.
+										</li>
+										<li class="solutions__data-more-item">
+											<strong>Нарушение солевого состава</strong>, которое может повлиять на вкусовые качества
+											производимой продукции,
+											например, привести к появлению горечи или постороннего привкуса.
+										</li>
+									</ul>
+									<p>
+										Вода для пищевого производства должна соответствовать самым высоким требованиям
+										по качеству
+										и составу, ведь она оказывает влияние не только на вкусовые характеристики
+										и безопасность продукции,
+										но и срок службы оборудования.
+									</p>
+									<p>
+										Мы готовы предоставить проект подготовки воды, поступающей из любых источников.
+										И разработать при этом индивидуальную схему, чтобы расходы на очистку были оптимальными.
+									</p>
+
+								</div>
+							</div>
+							<div class="solutions__image">
+								<img src="@img/solutions-1.png" alt="">
+							</div>
+						</div>
+						<div class="solutions__show-more">
+							<button class="button" class='show-more' id='showMore'>Смотреть еще</button>
+						</div>
+					</div>
+					<div class="solutions__content solutions__data-more" data-showmore>
+						<div class="solutions__wrapper">
+							<div class="solutions__data">
+								<h3 class="solutions__data-title">Нефтяная отрасль</h3>
+								<p class="solutions__data-text">Предприятия нефтехимической промышленности потребляют огромное
+									количество воды. </p>
+								<p>Она используется для различных целей:</p>
+								<ul class='solutions__data-more-list'>
+									<li class="solutions__data-more-item">
+										Приготовления растворов, смазочно-охлаждающих жидкостей и эмульсий;
+									<li class="solutions__data-more-item">
+										Подпитки котлов и другого технологического оборудования;
+									</li>
+									<li class="solutions__data-more-item">
+										Получения пара с требуемыми параметрами;
+									</li>
+									<li class="solutions__data-more-item">
+										Производства химической продукции широкого спектра назначения;
+									</li>
+									<li class="solutions__data-more-item">
+										В качестве теплоносителя (в горячем и парообразном состоянии) и хладагента для химической
+										аппаратуры, а также растворителя твердых, жидких и газообразных веществ;
+									</li>
+									<li>
+										В установках охлаждения и конденсации различных продуктов дистилляции.
+									</li>
+								</ul>
+								<p>
+									От того, насколько хорошо подготовлена вода в нефтедобывающей и перерабатывающей отрасли, зависит
+									качество выпускаемой продукции и срок службы технологического оборудования.
+								</p>
+								<p>
+									Одним из самых важных моментов является очистка пластовых вод — они агрессивны, способствуют появлению
+									коррозии оборудования, нарушают герметичность скважин и негативно влияют на окружающую среду.
+								</p>
+								<p>
+									В зависимости от назначения используемой воды необходимо тщательно прорабатывать инженерные решения, а
+									также подбирать современные и надежные устройства для очистки.
+								</p>
+								<p>
+									Грамотно составленная система подготовки воды позволит предотвратить появление накипи и коррозии,
+									обеспечить необходимые параметры питательной, подпиточной воды и пара, сократить расход реагентов и
+									затраты на ремонт оборудования, а также автоматизировать процесс водоочистки.
+								</p>
+								<p>
+									Мы более 20 лет успешно реализуем проекты в области подготовки воды для различных предприятий
+									нефтехимической и добывающей промышленности. Обеспечим и вас водой требуемого качества.
+								</p>
+							</div>
+							<div class="solutions__image">
+								<img src="@img/solutions-2.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="tech" id="tech">
+				<div class="tech__container">
+					<h2 class="tech__title _title">
+						Технологии
+					</h2>
+					<div data-tabs class="tech-tabs">
+						<nav data-tabs-titles class="tech-tabs__navigation">
+							<button type="button" class="tech-tabs__title _tab-active">Напорная фильтрация</button>
+							<button type="button" class="tech-tabs__title">Ультрафильтрация</button>
+							<button type="button" class="tech-tabs__title">Обратный осмос</button>
+						</nav>
+						<div data-tabs-body class="tech-tabs__content">
+							<div class="tech-tabs__body">
+								<div class="tech-tabs__body-wrapper">
+									<img src="@img/tech-icon.svg" alt="tech icon" class='complete-tabs__body-icon'>
+									<div class="tech-tabs__body-text">
+										Система фильтрации, мод. RFA, первичных и сточных вод, разделена на 2 категории:— Фильтрация с
+										использованием кварцевого песка;— Фильтрация методом адсорбции с помощью активированного угля или
+										цеолита.
+										Фильтр из кварцевого песка захватывает взвешенные частицы, имеющие размер в 20 мкм. Фильтр из
+										активированного угля захватывает коллоидные и взвешенные частицы.
+									</div>
+								</div>
+							</div>
+							<div class="tech-tabs__body">
+								<div class="tech-tabs__body-wrapper">
+									<img src="@img/tech-icon.svg" alt="tech icon" class='complete-tabs__body-icon'>
+									<div class="tech-tabs__body-text">
+										Система ультрафильтрации
+									</div>
+								</div>
+							</div>
+							<div class="tech-tabs__body">
+								<div class="tech-tabs__body-wrapper">
+									<img src="@img/tech-icon.svg" alt="tech icon" class='complete-tabs__body-icon'>
+									<div class="tech-tabs__body-text">
+										Обратный осмос
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="complete" id="complete">
+				<div class="complete__container">
+					<h2 class="complete__title _title">
+						Комплектующие
+					</h2>
+					<div data-tabs class="complete-tabs">
+						<nav data-tabs-titles class="complete-tabs__navigation">
+							<button type="button" class="complete-tabs__title _tab-active">Мембраны</button>
+							<button type="button" class="complete-tabs__title">Мембранные корпуса</button>
+							<button type="button" class="complete-tabs__title">Уф модули</button>
+						</nav>
+						<div data-tabs-body class="complete-tabs__content">
+							<div class="complete-tabs__body">
+								<div class="complete-tabs__body-wrapper">
+									<img src="@img/complete.svg" alt="complete icon" class='complete-tabs__body-icon'>
+									<div class="complete-tabs__body-text">
+										Система фильтрации, мод. RFA, первичных и сточных вод, разделена на 2 категории:— Фильтрация с
+										использованием кварцевого песка;— Фильтрация методом адсорбции с помощью активированного угля или
+										цеолита.
+										Фильтр из кварцевого песка захватывает взвешенные частицы, имеющие размер в 20 мкм. Фильтр из
+										активированного угля захватывает коллоидные и взвешенные частицы.
+										<a href="" class="complete-tabs__body-link button">Смотреть товар</a>
+									</div>
+								</div>
+							</div>
+							<div class="complete-tabs__body">
+								<div class="complete-tabs__body-wrapper">
+									<img src="@img/complete.svg" alt="complete icon" class='complete-tabs__body-icon'>
+									<div class="complete-tabs__body-text">
+										Система ультрафильтрации
+										<a href="" class="complete-tabs__body-link button">Смотреть товар</a>
+									</div>
+								</div>
+							</div>
+							<div class="complete-tabs__body">
+								<div class="complete-tabs__body-wrapper">
+									<img src="@img/complete.svg" alt="complete icon" class='complete-tabs__body-icon'>
+									<div class="complete-tabs__body-text">
+										Обратный осмос
+										<a href="" class="complete-tabs__body-link button">Смотреть товар</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="services" id="services">
+				<div class="services__container-big">
+					<h2 class="services__title _title">Услуги</h2>
+					<ul class="services__list">
+						<li class="services__item">
+							<div class="services__item-body">
+								<img src="@img/services-image.png" alt="image">
+								<h3 class='services__item-title'>Расчет и подбор</h3>
+							</div>
+							<a href='#' class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<img src="@img/services-image.png" alt="image">
+								<h3 class='services__item-title'>ПИР</h3>
+							</div>
+							<a href='#' class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<img src="@img/services-image.png" alt="image">
+								<h3 class='services__item-title'>ПНР + ШМР</h3>
+							</div>
+							<a href='#' class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<img src="@img/services-image.png" alt="image">
+								<h3 class='services__item-title'>Аудит</h3>
+							</div>
+							<a href='#' class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<img src="@img/services-image.png" alt="image">
+								<h3 class='services__item-title'>ПНР + ШМР</h3>
+							</div>
+							<a href='#' class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<img src="@img/services-image.png" alt="image">
+								<h3 class='services__item-title'>Аудит</h3>
+							</div>
+							<a href='#' class="services__item-link button _fw">Подробнее</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="map">
+				<div class="map__block" id="map_petersburg"></div>
+				<div class="map__block" id="map_moscow"></div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+
+	@@include('html/_js.htm',{})
+</body>
+
 </html>
