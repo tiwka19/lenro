@@ -1,5 +1,5 @@
 body::after {
-	content: "";
+	content: '';
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
 	width: 100%;
@@ -58,4 +58,56 @@ body::after {
 	.lock & {
 		visibility: visible;
 	}
+}
+.popup__heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: rem(30);
+	color: #fff;
+}
+.popup__close {
+	width: rem(30);
+	height: rem(30);
+}
+.popup__title {
+	text-align: center;
+	font-weight: 500;
+	@include adaptiveValue('font-size', 28, 22);
+}
+.popup__input-group {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: rem(30);
+}
+.popup__label {
+	font-size: rem(20);
+	line-height: math.div(24, 20);
+	font-weight: 500;
+	margin-bottom: rem(15);
+	color: #fff;
+}
+.popup__input {
+	background-color: transparent;
+	outline: 0;
+	color: #fff;
+	font-size: rem(18);
+	font-weight: 500;
+	padding-bottom: rem(5);
+	border-bottom: 1px solid #fff;
+}
+
+.popup__button {
+	padding: rem(25) rem(15);
+	border: 2px solid #ffffff;
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	margin-bottom: rem(25);
+}
+.popup__description {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+	font-weight: 500;
 }

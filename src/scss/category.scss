@@ -11,18 +11,17 @@
 	&__products {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		@include adaptiveValue('gap', 50, 25);
-		@media (max-width: $mobile) {
+		gap: rem(50);
+		@include adaptiveValue('gap', 50, 25, 3, 1340, 992);
+		@media (max-width: $tablet) {
 			grid-template-columns: 1fr 1fr;
 		}
-		@media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
 			grid-template-columns: 1fr;
 		}
 	}
 
 	.product {
-		
-
 		&__body {
 			padding: rem(20);
 			border: 1px solid #898989;

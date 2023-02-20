@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230217151352">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230217151352"></script>
+
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container-big">
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<a href="index.html" class="header__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--catalog menu-catalog">
+								<button class="menu__link menu-catalog__button" data-spoller>
+									<svg width="24" height="15" viewBox="0 0 24 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+										<path d="M1 8H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+										<path d="M1 14H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+									</svg>
+									КАТАЛОГ
+									<span class="menu-catalog__arrow">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+										</svg>
+									</span>
+								</button>
+								<div class="menu-catalog__body">
+									<div class="menu-catalog__body-item">
+										<div class="menu-catalog__title">МЕМБРАННЫЕ ЭЛЕМЕНТЫ</div>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__list-item">
+												<a href="#">Мембранные элементы Hydranautics</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#">Мембранные элементы LG</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#">Взаимозаменяемость мембран</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#">Мембранные элементы KeenSen</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__body-item">
+										<div class="menu-catalog__title">
+											УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ
+										</div>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__list-item">
+												<a href="#"> Категория #1</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#"> Категория #2</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+
+
+							<li class="menu__item"><a href="#" class="menu__link">УСЛУГИ</a></li>
+							<li class="menu__item">
+								<a href="solutions.html" class="menu__link">РЕШЕНИЯ</a>
+							</li>
+							<li class="menu__item">
+								<a href="news.html" class="menu__link">НОВОСТИ</a>
+							</li>
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">О НАС</a>
+							</li>
+							<li class="menu__item">
+								<button data-goto="#footer" class="menu__link">КОНТАКТЫ</button>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header__callback">
+					<span class="header__callback-heading">Звонки по России бесплатно</span>
+					<a href="tel:88002502360" class="header__callback-title">8 800 250-23-60</a>
+					<a href="tel:88002502360" class="header__callback-link">Заказать звонок</a>
+				</div>
+
+				<button class="header__search">
+					<img src="img/search.svg" alt="search" width="30px" />
+				</button>
+
+				<div class="header__catalog catalog">
+					<div class="catalog__container-big">
+						<div class="catalog__head">
+							<a href="/" class="header__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture></a>
+							<div class="catalog__head-title">Меню каталога</div>
+							<button class="catalog__head-button">
+								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M29.5 1L15.25 15M1 29L15.25 15M15.25 15L1 1L29.5 29" stroke="black" />
+								</svg>
+							</button>
+						</div>
+						<div class="catalog__body">
+							<div data-tabs class="tabs tabs-catalog">
+								<nav data-tabs-titles class="tabs-catalog__navigation">
+									<button type="button" class="tabs-catalog__title _tab-active">
+										МЕМБРАННЫЕ ЭЛЕМЕНТЫ
+									</button>
+									<button type="button" class="tabs-catalog__title">
+										УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ
+									</button>
+									<button type="button" class="tabs-catalog__title">
+										ХИМИЧЕСКИЕ РЕАГЕНТЫ
+									</button>
+									<!-- <button type="button" class="tabs-catalog__title">ГОТОВЫЕ СИСТЕМЫ</button> -->
+								</nav>
+								<div data-tabs-body class="tabs__content">
+									<div class="tabs__body">
+										<ul class="tabs__body-list">
+											<li class="tabs__body-item">
+												Мембранные элементы Hydranautics
+											</li>
+											<li class="tabs__body-item">Мембранны элементы LG</li>
+											<li class="tabs__body-item">Взаимозаменяемость мембран</li>
+											<li class="tabs__body-item">Мембранные элементы KeenSen</li>
+										</ul>
+									</div>
+									<div class="tabs__body">
+										<ul class="tabs__body-list">
+											<li class="tabs__body-item">
+												2Мембранные элементы Hydranautics
+											</li>
+											<li class="tabs__body-item">Мембранны элементы LG</li>
+											<li class="tabs__body-item">Взаимозаменяемость мембран</li>
+											<li class="tabs__body-item">Мембранные элементы KeenSen</li>
+										</ul>
+									</div>
+									<div class="tabs__body">
+										<ul class="tabs__body-list">
+											<li class="tabs__body-item">
+												3Мембранные элементы Hydranautics
+											</li>
+											<li class="tabs__body-item">Мембранны элементы LG</li>
+											<li class="tabs__body-item">Взаимозаменяемость мембран</li>
+											<li class="tabs__body-item">Мембранные элементы KeenSen</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<div class="page-solutions">
+				<div class="solutions">
+					<div class="solutions__container-big">
+						<h2 class="solutions__title _title">Услуги</h2>
+						<ul class="services__list">
+							<li class="services__item">
+								<div class="services__item-body">
+									<div class="services__item-image-ibg">
+										<picture><source data-srcset="img/solution-cat-1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/solution-cat-1.png" alt="" /></picture>
+									</div>
+									<h3 class="services__item-title">Пищевое производство</h3>
+								</div>
+								<a href="#" class="services__item-link button _fw">Подробнее</a>
+							</li>
+							<li class="services__item">
+								<div class="services__item-body">
+									<div class="services__item-image-ibg">
+										<picture><source data-srcset="img/solution-cat-2.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/solution-cat-2.png" alt="" /></picture>
+									</div>
+									<h3 class="services__item-title">Нефтяная отрасль</h3>
+								</div>
+								<a href="#" class="services__item-link button _fw">Подробнее</a>
+							</li>
+							<li class="services__item">
+								<div class="services__item-body">
+									<div class="services__item-image-ibg">
+										<picture><source data-srcset="img/solution-cat-3.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/solution-cat-3.png" alt="" /></picture>
+									</div>
+									<h3 class="services__item-title">
+										Химическая промышленность
+									</h3>
+								</div>
+								<a href="#" class="services__item-link button _fw">Подробнее</a>
+							</li>
+							<li class="services__item">
+								<div class="services__item-body">
+									<div class="services__item-image-ibg">
+										<picture><source data-srcset="img/solution-cat-4.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/solution-cat-4.png" alt="" /></picture>
+									</div>
+									<h3 class="services__item-title">Отели и гостиницы</h3>
+								</div>
+								<a href="#" class="services__item-link button _fw">Подробнее</a>
+							</li>
+							<li class="services__item">
+								<div class="services__item-body">
+									<div class="services__item-image-ibg">
+										<picture><source data-srcset="img/solution-cat-5.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/solution-cat-5.png" alt="" /></picture>
+									</div>
+									<h3 class="services__item-title">
+										Ликеро-водочные предприятия
+									</h3>
+								</div>
+								<a href="#" class="services__item-link button _fw">Подробнее</a>
+							</li>
+							<li class="services__item">
+								<div class="services__item-body">
+									<div class="services__item-image-ibg">
+										<picture><source data-srcset="img/solution-cat-6.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/solution-cat-6.png" alt="" /></picture>
+									</div>
+									<h3 class="services__item-title">
+										Электроника и приборостроение
+									</h3>
+								</div>
+								<a href="#" class="services__item-link button _fw">Подробнее</a>
+							</li>
+							<li class="services__item">
+								<div class="services__item-body">
+									<div class="services__item-image-ibg">
+										<picture><source data-srcset="img/solution-cat-7.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/solution-cat-7.png" alt="" /></picture>
+									</div>
+									<h3 class="services__item-title">
+										Паровые и водогрейные котельные
+									</h3>
+								</div>
+								<a href="#" class="services__item-link button _fw">Подробнее</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer" id="footer">
+			<div class="footer__container">
+				<div class="footer__items">
+					<div class="footer__item">
+						<div class="footer__item-title">МОСКВА</div>
+						<div class="footer__item-descr">Производственная зона <br> Мурино,Круговой проезд д.1 пр. <br> Энгельса 154,
+							офис 467
+						</div>
+						<a href="tel:88002502360" class="footer__item-phone">8 800 250-23-60</a>
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-title">САНКТ-ПЕТЕРБУРГ</div>
+						<div class="footer__item-descr">ул. Орджоникидзе, д.11, стр. 1А, офис 1.</div>
+						<a href="tel:+74952344172" class="footer__item-phone">+7 495 234-41-72</a>
+
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-title">© 2022,ЛенРО</div>
+						<div class="footer__item-descr">Водоподготовка для профессионалов</div>
+						<a href="mailto:lenro@lenro.ru" class="footer__item-phone">lenro@lenro.ru</a>
+					</div>
+				</div>
+				<span class="footer__item-sub">Предложение не является публичной офертой</span>
+			</div>
+		</footer>
+	</div>
+	<div id="productForm" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<form class="popup__content">
+				<div class="popup__heading">
+					<div class="popup__title" id='productName'>
+						Название модели
+					</div>
+					<button data-close class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+				<div class="popup__body">
+					<div class="popup__input-group">
+						<label for="name" class="popup__label">Ваше имя</label>
+						<input autocomplete="off" type="text" name="form[]" id='name' placeholder="Введите ваше имя " class="popup__input">
+					</div>
+					<div class="popup__input-group">
+						<label for="email" class="popup__label">Ваш еmail</label>
+						<input autocomplete="off" type="email" id='email' name="form[]" placeholder="Введите ваш email " class="popup__input">
+					</div>
+					<button type="submit" class="popup__button _fw">Отправить</button>
+					<div class="popup__description">Оставляя заявку, Вы даете согласие на обработку своих персональных данных.</div>
+				</div>
+			</form>
+		</div>
+	</div> <!-- <script src="//api-maps.yandex.ru/3.0/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230217151352"></script> -->
+	<script src="js/app.min.js?_v=20230217151352"></script>
+</body>
+
+</html>

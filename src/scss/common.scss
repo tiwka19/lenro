@@ -1,80 +1,108 @@
 // Заголовки, загальні БЕМ блоки та інше...
 section {
-	@include adaptiveValue('padding-top', 100, 50);
-	@include adaptiveValue('padding-bottom', 100, 50);
+  @include adaptiveValue("padding-top", 100, 30);
+  @include adaptiveValue("padding-bottom", 100, 30);
 }
 
 .page {
-	@include adaptiveValue('padding-top', 100, 50);
+  @include adaptiveValue("padding-top", 120, 50);
+  @include adaptiveValue("padding-bottom", 100, 50);
 }
 
 ._title {
-	@include adaptiveValue('font-size', 48, 30);
-	@include adaptiveValue('margin-bottom', 50, 30);
-	line-height: math.div(58, 48);
-	text-align: center;
-	font-weight: 500;
+  @include adaptiveValue("font-size", 48, 25);
+  @include adaptiveValue("margin-bottom", 50, 25);
+  line-height: math.div(58, 48);
+  text-align: center;
+  font-weight: 500;
+}
+
+.flex {
+  display: flex;
+}
+.flex-center {
+  align-items: center;
+}
+.flex-stack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.solution-page {
+  padding: rem(50) 0;
 }
 
 .catalog {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: #fff;
-	opacity: 0;
-	visibility: hidden;
-	&._active {
-		opacity: 1;
-		visibility: visible;
-	}
-	&__head {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-bottom: rem(100);
-		padding-top: rem(9);
-	}
-	&__head-title {
-		font-size: rem(30);
-	}
-	.tabs-catalog {
-		display: flex;
-		padding-bottom: rem(50);
-		&__navigation {
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			gap: rem(50);
-			border-right: 1px solid $redColor;
-			padding-right: rem(40);
-			margin-right: rem(40);
-			flex: 0 1 rem(700);
-		}
-		&__title {
-			font-size: rem(26);
-			&._tab-active {
-				color: $redColor;
-			}
-			@media (any-hover: hover) {
-				&:hover {
-					color: $redColor;
-				}
-			}
-		}
-	}
-	.tabs {
-		&__content {
-			flex: 0 1 rem(700);
-		}
-		&__body-list {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: rem(30);
-			margin-bottom: rem(30);
-		}
-		&__body-item {
-			font-size: rem(26);
-		}
-	}
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.5);
+  &._active {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(100);
+    padding-top: rem(9);
+  }
+  &__head-title {
+    font-size: rem(30);
+  }
+  .tabs-catalog {
+    display: flex;
+    padding-bottom: rem(50);
+    &__navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(50);
+      border-right: 1px solid $redColor;
+      padding-right: rem(40);
+      margin-right: rem(40);
+      flex: 0 1 rem(700);
+    }
+    &__title {
+      font-size: rem(26);
+      transition: color 0.2s ease 0s;
+      &._tab-active {
+        color: $redColor;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: $redColor;
+        }
+      }
+    }
+  }
+  .tabs {
+    &__content {
+      flex: 0 1 rem(700);
+    }
+    &__body-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: rem(30);
+      margin-bottom: rem(30);
+    }
+    &__body-item {
+      font-size: rem(26);
+      transition: color 0.2s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: $redColor;
+        }
+      }
+    }
+  }
+  &__body {
+    padding: rem(10) rem(15);
+  }
 }

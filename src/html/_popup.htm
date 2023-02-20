@@ -1,17 +1,29 @@
 <div id="productForm" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<form class="popup__content">
-			<div class="popup__title">Название модели</div>
+			<div class="popup__heading">
+				<div class="popup__title" id='productName'>
+					Название модели
+				</div>
+				<button data-close class="popup__close">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5"
+						stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+			</div>
 			<div class="popup__body">
 				<div class="popup__input-group">
 					<label for="name" class="popup__label">Ваше имя</label>
-					<input autocomplete="off" type="text" name="form[]" id='name' placeholder="Введите ваше имя " class="input">
+					<input autocomplete="off" type="text" name="form[]" id='name' placeholder="Введите ваше имя "
+						class="popup__input">
 				</div>
 				<div class="popup__input-group">
 					<label for="email" class="popup__label">Ваш еmail</label>
-					<input autocomplete="off" type="email" id='email' name="form[]" placeholder="Введите ваше имя " class="input">
+					<input autocomplete="off" type="email" id='email' name="form[]" placeholder="Введите ваш email "
+						class="popup__input">
 				</div>
-				<button type="submit" class="popup__button">Отправить</button>
+				<button type="submit" class="popup__button _fw">Отправить</button>
 				<div class="popup__description">Оставляя заявку, Вы даете согласие на обработку своих персональных данных.</div>
 			</div>
 		</form>
