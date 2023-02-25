@@ -33,6 +33,16 @@ section {
   padding: rem(50) 0;
 }
 
+.wpcf7-not-valid-tip {
+  color: #403535 !important;
+  padding-top: rem(5);
+}
+
+.wpcf7-response-output,
+.wpcf7-spinner {
+  display: none;
+}
+
 .catalog {
   position: absolute;
   top: 0;
@@ -72,6 +82,7 @@ section {
     &__title {
       font-size: rem(26);
       transition: color 0.2s ease 0s;
+      text-transform: uppercase;
       &._tab-active {
         color: $redColor;
       }
@@ -104,5 +115,38 @@ section {
   }
   &__body {
     padding: rem(10) rem(15);
+  }
+}
+
+.swiper__buttons {
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  @include adaptiveValue("min-width", 260, 200);
+  display: none;
+  @media (min-width:$pc){
+     display: grid; 
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  svg  {
+    @include adaptiveValue("width", 100, 50);
+    @include adaptiveValue("height", 100, 50);
+  }
+  svg path {
+    transition: all 0.2s ease 0s;
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      svg path {
+        fill: #d52628;
+      }
+    }
   }
 }

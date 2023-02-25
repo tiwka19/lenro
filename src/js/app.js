@@ -12,25 +12,25 @@
 */
 
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
-window['FLS'] = true
+window["FLS"] = false;
 
 // Підключення основного файлу стилів
-import '../scss/style.scss'
+import "../scss/style.scss";
 
 // ========================================================================================================================================================================================================================================================
 // Функціонал ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
-import * as flsFunctions from './files/functions.js'
+import * as flsFunctions from "./files/functions.js";
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
-flsFunctions.isWebp()
+flsFunctions.isWebp();
 /* Додавання класу touch для HTML якщо браузер мобільний */
 // flsFunctions.addTouchClass();
 /* Додавання loaded для HTML після повного завантаження сторінки */
 // flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
-flsFunctions.menuInit()
+flsFunctions.menuInit();
 /* Враховування плаваючої панелі на мобільних пристроях при 100vh */
 // flsFunctions.fullVHfix();
 
@@ -39,32 +39,32 @@ flsFunctions.menuInit()
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-flsFunctions.spollers()
+flsFunctions.spollers();
 
 /*
 Модуль "Таби"
 Документація: https://template.fls.guru/template-docs/modul-taby.html
 Сніппет (HTML): tabs
 */
-flsFunctions.tabs()
+flsFunctions.tabs();
 
 /*
 Модуль "Показати ще"
 Документація: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сніппет (HTML): showmore
 */
-
+import * as flsForms from "./files/forms/forms.js";
 /* Робота з полями форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
-	viewPass: false,
-	autoHeight: false
+  viewPass: false,
+  autoHeight: false,
 });
-*/
+
 /* Надсилання форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль форми "кількість" */
 // flsForms.formQuantity();
@@ -114,21 +114,21 @@ flsForms.formFieldsInit({
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-import './files/sliders.js'
+import "./files/sliders.js";
 
-import './files/scroll/lazyload.js'
+import "./files/scroll/lazyload.js";
 
-import './libs/popup.js'
+import "./libs/popup.js";
 
 // ========================================================================================================================================================================================================================================================
-import * as flsScroll from './files/scroll/scroll.js'
+import * as flsScroll from "./files/scroll/scroll.js";
 // Плавна навігація по сторінці
 // Документація: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
 flsScroll.pageNavigation();
 
 // Функціонал додавання класів до хедеру під час прокручування
 // Документація: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-flsScroll.headerScroll()
+flsScroll.headerScroll();
 
 // Функціонал липкого блоку
 // flsScroll.stickyBlock();
@@ -163,5 +163,5 @@ flsScroll.headerScroll()
 // Інше ========================================================================================================================================================================================================================================================
 // ========================================================================================================================================================================================================================================================
 /* Підключаємо файли зі своїм кодом */
-import './files/script.js'
+import "./files/script.js";
 //============================================================================================================================================================================================================================================

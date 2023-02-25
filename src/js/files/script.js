@@ -1,6 +1,8 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 // Підключення списку активних модулів
 import { menuClose } from "./functions.js";
+import { flsModules } from "./modules.js";
+import Toastify from "toastify-js";
 
 const catalogDropdown = () => {
   const dropdownButton = document.querySelector(".menu-catalog button");
@@ -127,6 +129,7 @@ const currentProductsName = () => {
     product.addEventListener("click", function (event) {
       let productName = this.querySelector(".product__title").textContent;
       productFormName.textContent = productName;
+      document.querySelector("#product").value = productName;
     });
   });
 };
@@ -143,3 +146,70 @@ menuLinks.forEach((link) => {
 
 const menuList = document.querySelector(".menu__list");
 menuList.setAttribute("data-spollers", 992);
+
+const formFunc = () => {
+  const form = document.querySelector(".wpcf7-form");
+  if (!form) return;
+  form.addEventListener(
+    "wpcf7submit",
+    function (e) {
+      flsModules.popup.open("#productForm");
+      console.log("ss");
+      if ("mail_sent" === e.detail.status) {
+        setTimeout(() => {
+          flsModules.popup.close("#productForm");
+          Toastify({
+            text: "Ваше сообщение успешно отправлено!",
+            duration: 3000,
+            newWindow: true,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+              background: "#d52628",
+              color: "#FFF",
+            },
+          }).showToast();
+        }, 100);
+      }
+    },
+    false
+  );
+
+  const formSubmitting = () => {
+    const elems = document.querySelectorAll(".wpcf7");
+    if (!elems.length) {
+      return false;
+    }
+    const forms = document.querySelectorAll(".wpcf7-form");
+    if (!forms.length) {
+      return false;
+    }
+
+    function _evtFormSubmit() {
+      this.disabled = true;
+      const submitBtn = this.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.setAttribute("data-default-text", submitBtn.innerText);
+      submitBtn.innerHTML = "<span>Подождите...</span>";
+    }
+
+    function _evtSubmitSuccess(e) {
+      const submitBtn = this.querySelector('button[type="submit"]');
+      setTimeout(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML =
+          "<span>" + submitBtn.getAttribute("data-default-text") + "</span>";
+      }, 600);
+    }
+
+    for (let i = forms.length - 1; i >= 0; i--) {
+      forms[i].addEventListener("submit", _evtFormSubmit, false);
+    }
+    for (let i = elems.length - 1; i >= 0; i--) {
+      elems[i].addEventListener("wpcf7submit", _evtSubmitSuccess, false);
+    }
+  };
+  formSubmitting();
+};

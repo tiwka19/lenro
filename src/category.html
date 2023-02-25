@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('html/_head.htm',{
-"title":"HomePage"
-})
+  @@include('html/_head.htm',{ "title":"HomePage" })
 
-<body>
-	<div class="wrapper">
-		@@include('html/_header.htm',{})
-		<main class="page">
-			<div class="category">
-				<div class="category__container">
-					<h1 class="category__title _title">Мембранные элементы</h1>
-					<div class="category__subtitle">Выберите нужный вам бренд</div>
-					<div class="category__products">
-						<div class="category__product product">
-							<div class="product__body">
-								<h2 class="product__title">Мембранные элементы Hydranautics</h2>
-								<div class="product__image-ibg"><img data-src="@img/product-1.png" alt=""></div>
-							</div>
-							<a href="#" class="product__link button _fw">Смотреть</a>
-						</div>
-						<div class="category__product product">
-							<div class="product__body">
-								<h2 class="product__title">Мембранные элементы Hydranautics</h2>
-								<div class="product__image-ibg"><img data-src="@img/product-1.png" alt=""></div>
-							</div>
-							<a href="#" class="product__link button _fw">Смотреть</a>
-						</div>
-						<div class="category__product product">
-							<div class="product__body">
-								<h2 class="product__title">Мембранные элементы Hydranautics</h2>
-								<div class="product__image-ibg"><img data-src="@img/product-1.png" alt=""></div>
-							</div>
-							<a href="#" class="product__link button _fw">Смотреть</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		@@include('html/_footer.htm',{})
-	</div>
-	@@include('html/_js.htm',{})
-</body>
-
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <div class="category">
+          <div class="category__container">
+            <h1 class="category__title _title">Мембранные элементы</h1>
+            <div class="category__subtitle">Выберите нужный вам бренд</div>
+            <div class="category__products">
+              <div class="category__product product">
+                <div class="product__body">
+                  <h2 class="product__title">
+                    Мембранные элементы Hydranautics
+                  </h2>
+                  <div class="product__image-ibg">
+                    <img data-src="@img/product-1.png" alt="" />
+                  </div>
+                </div>
+                <a href="#" class="product__link button _fw">Смотреть</a>
+              </div>
+              <div class="category__product product">
+                <div class="product__body">
+                  <h2 class="product__title">
+                    Мембранные элементы LG
+                  </h2>
+                  <div class="product__image-ibg">
+                    <img data-src="@img/product-1.png" alt="" />
+                  </div>
+                </div>
+                <a href="#" class="product__link button _fw">Смотреть</a>
+              </div>
+              <div class="category__product product">
+                <div class="product__body">
+                  <h2 class="product__title">
+                    Мембранные элементы KeenSen
+                  </h2>
+                  <div class="product__image-ibg">
+                    <img data-src="@img/product-1.png" alt="" />
+                  </div>
+                </div>
+                <a href="#" class="product__link button _fw">Смотреть</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>

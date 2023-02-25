@@ -1,105 +1,126 @@
 .page-product {
-	padding-top: rem(50);
+  padding-top: rem(50);
 }
 .product {
-	&__wrapper {
-		display: flex;
-		align-items: flex-start;
-		@include adaptiveValue('gap', 40, 20);
-		@media (max-width: $tablet) {
-			flex-direction: column;
-		}
-	}
-	&__item {
-		border-radius: rem(10);
-		@media (max-width: $tablet) {
-			width: 100%;
-			text-align: center;
-		}
-	}
-	&__item-image {
-		padding: rem(40);
-		border: 1px solid #898989;
-		border-radius: rem(5) rem(5) 0 0;
-		img {
-			max-width: 100%;
-		}
-	}
-	&__button {
-		max-width: 100%;
-		border-radius: 0;
-	}
-	&__data {
-		@media (min-width: $tablet) {
-			flex: 0 1 rem(665);
-		}
-	}
-	&__data-item {
-		margin-bottom: rem(30);
-	}
-	&__data-title {
-		@include adaptiveValue("font-size", 28, 22);
-		font-weight: 500;
-		margin-bottom: rem(15);
-	}
-	&__data-list {
-		list-style-type: disc;
-		.product__descr & {
-			padding-left: rem(20);
-		}
-	}
-	&__data-list-item {
-		list-style-type: disc;
-		margin-bottom: rem(15);
-		.product__char & {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			gap: rem(10);
-			@media (max-width: $mobileSmall) {
-				flex-direction: column;
-				align-items: flex-start;
-			}
-		}
-		span:first-child {
-			position: relative;
-			display: block;
-			&::before {
-				content: '•';
-				padding-right: rem(5);
-			}
-			@media (max-width: $mobileSmall) {
-				&::before {
-					display: none;
-				}
-			}
-		}
-		span:last-child {
-			@media (max-width: $mobileSmall) {
-				color: rgba(0, 0, 0, 0.6);
-			}
-		}
-		&:not(:last-child) {
-			margin-bottom: rem(15);
-		}
-	}
-	&__data-sublist {
-		padding-left: rem(25);
-		padding-top: rem(10);
-		@media (max-width: $mobile) {
-			padding-left: rem(15);
-		}
-	}
-	&__data-sublist-item {
-		list-style-type: disc;
-		&:not(:last-child) {
-			margin-bottom: rem(15);
-		}
-	}
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    @include adaptiveValue("gap", 40, 20);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    border-radius: rem(10);
+    @media (max-width: $tablet) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__item-image {
+    padding: rem(40);
+    border: 1px solid #898989;
+    border-radius: rem(5) rem(5) 0 0;
+    img {
+      max-width: 100%;
+    }
+  }
+  &__button {
+    max-width: 100%;
+    border-radius: 0;
+  }
+  &__data {
+    @media (min-width: $tablet) {
+      flex: 0 1 rem(665);
+    }
+  }
+  &__data-subtitle {
+    font-size: rem(20);
+    font-weight: 500;
+    margin-bottom: rem(10);
+  }
+  &__data-item {
+    margin-bottom: rem(15);
+  }
+  &__data-title {
+    @include adaptiveValue("font-size", 28, 22);
+    font-weight: 500;
+    margin-bottom: rem(15);
+  }
+  &__data-list {
+    list-style-type: disc;
+    padding-bottom: rem(15);
+    .product__descr & {
+      padding-left: rem(20);
+    }
+  }
+  &__data-list-item {
+    list-style-type: disc;
+    margin-bottom: rem(15);
+    .product__char & {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: rem(10);
+      @media (max-width: $mobileSmall) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    span:first-child {
+      position: relative;
+      display: block;
+      &::before {
+        content: "•";
+        padding-right: rem(5);
+      }
+      @media (max-width: $mobileSmall) {
+        &::before {
+          display: none;
+        }
+      }
+    }
+    span:last-child {
+      @media (max-width: $mobileSmall) {
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+  &__data-sublist {
+    padding-left: rem(25);
+    padding-top: rem(10);
+    @media (max-width: $mobile) {
+      padding-left: rem(15);
+    }
+  }
+  &__data-sublist-item {
+    list-style-type: disc;
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
 }
 
 .products__related {
-	.category__product {
-		padding-top: rem(0);
-	}
+  padding-top: rem(50);
+  .category__product {
+    padding-top: rem(0);
+  }
+}
+
+.products {
+  &__box {
+    display: flex;
+    gap: rem(20);
+    &__wrapper {
+      max-width: rem(500);
+    }
+    .product {
+      max-width: rem(450);
+      margin: 0 auto;
+    }
+  }
 }
