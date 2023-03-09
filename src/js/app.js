@@ -41,12 +41,15 @@ flsFunctions.menuInit();
 */
 flsFunctions.spollers();
 
+import "./files/sliders.js";
+
 /*
 Модуль "Таби"
 Документація: https://template.fls.guru/template-docs/modul-taby.html
 Сніппет (HTML): tabs
 */
 flsFunctions.tabs();
+
 
 /*
 Модуль "Показати ще"
@@ -114,7 +117,7 @@ flsForms.formSubmit();
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-import "./files/sliders.js";
+
 
 import "./files/scroll/lazyload.js";
 

@@ -1,14 +1,14 @@
 .page-news {
   .news {
     padding-bottom: rem(100);
-    background-color: #fff;
+    padding-top: rem(50);
   }
 }
 
 .news__posts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  @include adaptiveValue("gap", 30, 15);
+  @include adaptiveValue('gap', 30, 15);
   @media (max-width: em(1024)) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -22,6 +22,12 @@
   background-color: #fff;
   overflow: hidden;
   border-radius: rem(10);
+  transition: transform 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
   &__image-ibg {
     padding-bottom: percent(323, 400);
     overflow: hidden;
@@ -29,12 +35,6 @@
     display: block;
     img {
       max-width: 100%;
-      transition: transform 0.3s ease 0s;
-      @media (any-hover: hover) {
-        &:hover {
-          transform: scale(1.05);
-        }
-      }
     }
   }
   &__body {
@@ -42,7 +42,7 @@
   }
   &__description {
     margin-bottom: rem(30);
-    @include adaptiveValue("font-size", 20, 16);
+    @include adaptiveValue('font-size', 20, 16);
     line-height: math.div(29, 20);
   }
   &__bottom {
@@ -57,11 +57,9 @@
     font-size: rem(16);
   }
   &__link {
+    display: block;
+  }
+  &__read {
     color: $redColor;
-    @media (any-hover: hover) {
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 }

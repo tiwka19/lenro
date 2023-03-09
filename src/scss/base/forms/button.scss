@@ -12,6 +12,7 @@
 	border-radius: rem(10);
 	transition: background-color 0.2s ease 0s;
 	text-align: center;
+	display: inline-block;
 	@media (max-width: $mobileSmall) {
 		font-size: rem(22);
 		padding: rem(12) rem(10);

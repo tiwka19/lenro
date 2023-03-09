@@ -6,7 +6,8 @@
   left: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 50;
+  z-index: 49;
+
   &._header-scroll {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   }
@@ -204,17 +205,19 @@
   }
   &__item {
     margin-bottom: rem(15);
-    padding-bottom: rem(15);
   }
   &__title {
     font-size: rem(16);
     font-weight: 600;
     margin-bottom: rem(15);
   }
+  &__list-item {
+    padding: rem(10) 0;
+  }
   &__list-item a {
     display: inline-block;
-    font-size: rem(16);
-    text-transform: capitalize;
+    font-size: rem(16) !important;
+    text-transform: capitalize !important;
     &:not(:last-child) {
       margin-bottom: rem(15);
     }
@@ -240,7 +243,7 @@
     span,
     &::before,
     &::after {
-      content: "";
+      content: '';
       transition: all 0.3s ease 0s;
       left: 0;
       position: absolute;

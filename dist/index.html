@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230308212759">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230308212759"></script>
+
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container-big">
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<a href="index.html" class="header__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture></a>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item menu__item--catalog menu-catalog">
+								<button class="menu__link menu-catalog__button" data-spoller>
+									<svg width="24" height="15" viewBox="0 0 24 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+										<path d="M1 8H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+										<path d="M1 14H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+									</svg>
+									КАТАЛОГ
+									<span class="menu-catalog__arrow">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+										</svg>
+									</span>
+								</button>
+								<div class="menu-catalog__body">
+									<div class="menu-catalog__body-item">
+										<div class="menu-catalog__title">МЕМБРАННЫЕ ЭЛЕМЕНТЫ</div>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__list-item">
+												<a href="#">Мембранные элементы Hydranautics</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#">Мембранные элементы LG</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#">Взаимозаменяемость мембран</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#">Мембранные элементы KeenSen</a>
+											</li>
+										</ul>
+									</div>
+									<div class="menu-catalog__body-item">
+										<div class="menu-catalog__title">УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ</div>
+										<ul class="menu-catalog__list">
+											<li class="menu-catalog__list-item">
+												<a href="#"> Категория #1</a>
+											</li>
+											<li class="menu-catalog__list-item">
+												<a href="#"> Категория #2</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</li>
+
+							<li class="menu__item"><a href="#" class="menu__link">УСЛУГИ</a></li>
+							<li class="menu__item">
+								<a href="solutions.html" class="menu__link">РЕШЕНИЯ</a>
+							</li>
+							<li class="menu__item">
+								<a href="news.html" class="menu__link">НОВОСТИ</a>
+							</li>
+							<li class="menu__item">
+								<a href="about.html" class="menu__link">О НАС</a>
+							</li>
+							<li class="menu__item">
+								<button data-goto="#footer" class="menu__link">КОНТАКТЫ</button>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header__callback">
+					<span class="header__callback-heading">Звонки по России бесплатно</span>
+					<a href="tel:88002502360" class="header__callback-title">8 800 250-23-60</a>
+					<button class="header__callback-link" data-popup="#callbackForm">Заказать звонок</button>
+				</div>
+
+				<button class="header__search">
+					<img src="img/search.svg" alt="search" width="30px" />
+				</button>
+
+				<div class="header__catalog catalog">
+					<div class="catalog__container-big">
+						<div class="catalog__head">
+							<a href="/" class="header__logo"><picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo" /></picture></a>
+							<div class="catalog__head-title">Меню каталога</div>
+							<button class="catalog__head-button">
+								<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M29.5 1L15.25 15M1 29L15.25 15M15.25 15L1 1L29.5 29" stroke="black" />
+								</svg>
+							</button>
+						</div>
+						<div class="catalog__body">
+							<div data-tabs class="tabs tabs-catalog">
+								<nav data-tabs-titles class="tabs-catalog__navigation">
+									<a href="test.com" target="_blank" class="tabs-catalog__title _tab-active">
+										МЕМБРАННЫЕ ЭЛЕМЕНТЫ
+										<svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM51.7071 8.70711C52.0976 8.31658 52.0976 7.68342 51.7071 7.29289L45.3431 0.928932C44.9526 0.538408 44.3195 0.538408 43.9289 0.928932C43.5384 1.31946 43.5384 1.95262 43.9289 2.34315L49.5858 8L43.9289 13.6569C43.5384 14.0474 43.5384 14.6805 43.9289 15.0711C44.3195 15.4616 44.9526 15.4616 45.3431 15.0711L51.7071 8.70711ZM1 9L51 9L51 7L1 7L1 9Z" fill="#D52628" />
+										</svg>
+									</a>
+									<button type="button" class="tabs-catalog__title">
+										УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ
+
+										<svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM51.7071 8.70711C52.0976 8.31658 52.0976 7.68342 51.7071 7.29289L45.3431 0.928932C44.9526 0.538408 44.3195 0.538408 43.9289 0.928932C43.5384 1.31946 43.5384 1.95262 43.9289 2.34315L49.5858 8L43.9289 13.6569C43.5384 14.0474 43.5384 14.6805 43.9289 15.0711C44.3195 15.4616 44.9526 15.4616 45.3431 15.0711L51.7071 8.70711ZM1 9L51 9L51 7L1 7L1 9Z" fill="#D52628" />
+										</svg>
+									</button>
+									<button type="button" class="tabs-catalog__title">
+										ХИМИЧЕСКИЕ РЕАГЕНТЫ
+										<svg width="52" height="16" viewBox="0 0 52 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM51.7071 8.70711C52.0976 8.31658 52.0976 7.68342 51.7071 7.29289L45.3431 0.928932C44.9526 0.538408 44.3195 0.538408 43.9289 0.928932C43.5384 1.31946 43.5384 1.95262 43.9289 2.34315L49.5858 8L43.9289 13.6569C43.5384 14.0474 43.5384 14.6805 43.9289 15.0711C44.3195 15.4616 44.9526 15.4616 45.3431 15.0711L51.7071 8.70711ZM1 9L51 9L51 7L1 7L1 9Z" fill="#D52628" />
+										</svg>
+									</button>
+								</nav>
+								<div data-tabs-body class="tabs__content">
+									<div class="tabs__body">
+										<ul class="tabs__body-list">
+											<li class="tabs__body-item">Мембранные элементы Hydranautics</li>
+											<li class="tabs__body-item">Мембранны элементы LG</li>
+											<li class="tabs__body-item">Взаимозаменяемость мембран</li>
+											<li class="tabs__body-item">Мембранные элементы KeenSen</li>
+										</ul>
+									</div>
+									<div class="tabs__body">
+										<ul class="tabs__body-list">
+											<li class="tabs__body-item">2Мембранные элементы Hydranautics</li>
+											<li class="tabs__body-item">Мембранны элементы LG</li>
+											<li class="tabs__body-item">Взаимозаменяемость мембран</li>
+											<li class="tabs__body-item">Мембранные элементы KeenSen</li>
+										</ul>
+									</div>
+									<div class="tabs__body">
+										<ul class="tabs__body-list">
+											<li class="tabs__body-item">3Мембранные элементы Hydranautics</li>
+											<li class="tabs__body-item">Мембранны элементы LG</li>
+											<li class="tabs__body-item">Взаимозаменяемость мембран</li>
+											<li class="tabs__body-item">Мембранные элементы KeenSen</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section class="hero" id="hero">
+				<div class="hero__container-big">
+					<div class="hero__slider swiper">
+						<div class="hero__wrapper swiper-wrapper">
+							<div class="hero__slide swiper-slide" style="background-image: urlimg/slider-1.png)">
+								<div class="hero__slide-content">
+									<div class="hero__slide-title">Производство установок обратного осмоса</div>
+									<div class="hero__slide-description">
+										Разработка и внедрение систем комплексной подготовки воды для технологических,
+										питьевых, хозяйственно-бытовых и других нужд предприятий и частных лиц.
+									</div>
+									<button class="hero__slide-button">Заказать</button>
+								</div>
+							</div>
+							<div class="hero__slide swiper-slide">
+								<div class="hero__slider-wrapper">
+									<div class="hero__slide-content">
+										<button class="hero__slide-button">Заказать</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="hero__slider-button">
+							<button type="button" class="hero__slider-prev">
+								<svg width="20" height="29" viewBox="0 0 20 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M18 2L3 14.5L18 27" stroke="white" stroke-width="3" stroke-linecap="round" />
+								</svg>
+							</button>
+							<button type="button" class="hero__slider-next">
+								<svg width="20" height="29" viewBox="0 0 20 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M2 2L17 14.5L2 27" stroke="white" stroke-width="3" stroke-linecap="round" />
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="about" id="about">
+				<div class="abount__container">
+					<h2 class="about__title _title">Информация о нас</h2>
+					<div data-tabs class="about-tabs">
+						<nav data-tabs-titles class="about-tabs__navigation">
+							<button type="button" class="about-tabs__title _tab-active">Компетенции</button>
+							<button type="button" class="about-tabs__title">Производство</button>
+							<button type="button" class="about-tabs__title">Партнеры</button>
+						</nav>
+						<div data-tabs-body class="about-tabs__content">
+							<div class="about-tabs__body">
+								<div class="about-tabs__body-wrapper">
+									<p class="about-tabs__text">
+										Компания ЛенРО более 20 лет специализируется на разработке, производстве и
+										поставках, комплектующих к системам водоподготовки и водоочистке с
+										использованием современных мембранных технологий для всех отраслей
+										промышленности
+									</p>
+								</div>
+							</div>
+							<div class="about-tabs__body">
+								<div class="about-tabs__body-wrapper">
+									<div class="about-tabs__text">
+										Компания располагает собственными производственно-складскими мощностями
+										площадью более 2500 кв/м и включает в себя:
+										<ol>
+											<li>Линия TIG сварки</li>
+											<li>Линия сборки</li>
+											<li>Линия сборки АСУТП</li>
+											<li>Линия гидравлический испытаний</li>
+											<li>Склад ГП</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+							<div class="about-tabs__body">
+								<div class="about-tabs__partners">
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/baltika.webp" type="image/webp"><img src="img/partners/baltika.png" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/bridgestone.webp" type="image/webp"><img src="img/partners/bridgestone.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/delta.webp" type="image/webp"><img src="img/partners/delta.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/bridgestone.webp" type="image/webp"><img src="img/partners/bridgestone.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/haval.webp" type="image/webp"><img src="img/partners/haval.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/hydrotech.webp" type="image/webp"><img src="img/partners/hydrotech.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/inter.webp" type="image/webp"><img src="img/partners/inter.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/kamaz.webp" type="image/webp"><img src="img/partners/kamaz.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/lg-chem.webp" type="image/webp"><img src="img/partners/lg-chem.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/nitto.webp" type="image/webp"><img src="img/partners/nitto.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/pacotom.webp" type="image/webp"><img src="img/partners/pacotom.png" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/phosagro.webp" type="image/webp"><img src="img/partners/phosagro.webp" alt="image" /></picture>
+									</div>
+									<div class="about-tabs__partner">
+										<picture><source srcset="img/partners/plus-group-logo.webp" type="image/webp"><img src="img/partners/plus-group-logo.webp" alt="image" /></picture>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="projects" id="projects">
+				<div class="projects__container">
+					<h2 class="projects__title _title">Наши проекты</h2>
+					<div data-tabs class="projects__wrapper">
+						<nav data-tabs-titles class="projects__navigation">
+							<button type="button" class="projects__navigation-title _tab-active">
+								АО "СПО Арктика"
+							</button>
+							<button type="button" class="projects__navigation-title">Дагинтерн</button>
+							<button type="button" class="projects__navigation-title">Задонье</button>
+							<button type="button" class="projects__navigation-title">ООО "НПП Лисскон"</button>
+							<button type="button" class="projects__navigation-title">Полихим</button>
+							<button type="button" class="projects__navigation-title">Ставролен - Лукойл</button>
+						</nav>
+
+						<div data-tabs-body class="projects__content">
+							<div class="projects__body">
+								<div class="projects__description">
+									Напорная фильтрация. Установка обратного осмоса производительностью по пермеату
+									= 3 м3/ч. + Станция химической мойки и 1 станции дозирования.
+								</div>
+								<div class="projects__slider swiper">
+									<div class="projects__slider-wrapper swiper-wrapper">
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8855.webp" type="image/webp"><img src="img/projects/DSC_8855.jpg" alt="" /></picture>
+											</div>
+										</div>
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8855.webp" type="image/webp"><img src="img/projects/DSC_8855.jpg" alt="" /></picture>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="projects__body">
+								<div class="projects__description">
+									Напорная фильтрация. Установка обратного осмоса производительностью по пермеату
+									= 3 м3/ч. + Станция химической мойки и 1 станции дозирования.
+								</div>
+								<div class="projects__slider swiper">
+									<div class="projects__slider-wrapper swiper-wrapper">
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8879.webp" type="image/webp"><img src="img/projects/DSC_8879.jpg" alt="" /></picture>
+											</div>
+										</div>
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8855.webp" type="image/webp"><img src="img/projects/DSC_8855.jpg" alt="" /></picture>
+											</div>
+										</div>
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8855.webp" type="image/webp"><img src="img/projects/DSC_8855.jpg" alt="" /></picture>
+											</div>
+										</div>
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8855.webp" type="image/webp"><img src="img/projects/DSC_8855.jpg" alt="" /></picture>
+											</div>
+										</div>
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8855.webp" type="image/webp"><img src="img/projects/DSC_8855.jpg" alt="" /></picture>
+											</div>
+										</div>
+										<div class="projects__slide swiper-slide">
+											<div class="projects__slide-image">
+												<picture><source srcset="img/projects/DSC_8855.webp" type="image/webp"><img src="img/projects/DSC_8855.jpg" alt="" /></picture>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="projects__body">Контент третьего таба</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="news" id="news">
+				<div class="news__container-big">
+					<h2 class="news__title _title">Свежие новости</h2>
+					<ul class="news__posts">
+						<li class="news__post post">
+							<a href="#" class="post__link">
+								<div class="post__image-ibg"><picture><source data-srcset="img/post-image.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/post-image.png" alt="post image" /></picture></div>
+								<div class="post__body">
+									<p class="post__description">
+										27 сентября ЛенРО для компании "Арктика" закончила производство установки обратного осмоса
+										производительностью 3000литров в час. Данная установка будет обеспечивать производственный
+										процесс нафталина.
+									</p>
+									<div class="post__bottom">
+										<span class="post__date">14.10.2022</span>
+										<span href="#" class="post__read">Читать подробнее</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="news__post post">
+							<a href="#" class="post__link">
+								<div class="post__image-ibg"><picture><source data-srcset="img/post-image.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/post-image.png" alt="post image" /></picture></div>
+								<div class="post__body">
+									<p class="post__description">
+										27 сентября ЛенРО для компании "Арктика" закончила производство установки обратного осмоса
+										производительностью 3000литров в час. Данная установка будет обеспечивать производственный
+										процесс нафталина.
+									</p>
+									<div class="post__bottom">
+										<span class="post__date">14.10.2022</span>
+										<span href="#" class="post__read">Читать подробнее</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="news__post post">
+							<a href="#" class="post__link">
+								<div class="post__image-ibg"><picture><source data-srcset="img/post-image.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/post-image.png" alt="post image" /></picture></div>
+								<div class="post__body">
+									<p class="post__description">
+										27 сентября ЛенРО для компании "Арктика" закончила производство установки обратного осмоса
+										производительностью 3000литров в час. Данная установка будет обеспечивать производственный
+										процесс нафталина.
+									</p>
+									<div class="post__bottom">
+										<span class="post__date">14.10.2022</span>
+										<span href="#" class="post__read">Читать подробнее</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="news__post post">
+							<a href="#" class="post__link">
+								<div class="post__image-ibg"><picture><source data-srcset="img/post-image.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/post-image.png" alt="post image" /></picture></div>
+								<div class="post__body">
+									<p class="post__description">
+										27 сентября ЛенРО для компании "Арктика" закончила производство установки обратного осмоса
+										производительностью 3000литров в час. Данная установка будет обеспечивать производственный
+										процесс нафталина.
+									</p>
+									<div class="post__bottom">
+										<span class="post__date">14.10.2022</span>
+										<span class="post__read">Читать подробнее</span>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+			<section class="solutions" id="solutuions">
+				<div class="solutions__container-big">
+					<h2 class="solutions__title _title">Решения под каждую отрасль</h2>
+					<div class="solutions__content">
+						<div class="solutions__wrapper">
+							<div class="solutions__data">
+								<h3 class="solutions__data-title">Пищевое производство</h3>
+								<p class="solutions__data-text">
+									Чистая качественная вода имеет колоссальное значение в пищевой промышленности.
+									Она востребована при производстве товаров, хозяйственного-бытовом использовании,
+									мытье технических емкостей и приборов и не только. От правильной подготовки
+									исходной воды зависит конечное качество выпускаемой продукции.
+								</p>
+								<div class="solutions__data-more" data-showmore>
+									<h4>Какие проблемы грозят при использовании неочищенной воды:</h4>
+									<ul class="solutions__data-more-list">
+										<li class="solutions__data-more-item">
+											<strong>Возникновение известковых отложений в трубах</strong>
+											, которые могут спровоцировать поломки и выход из строя оборудования. Также
+											повышенная жесткость приводит к выпадению осадка и ухудшению вкусовых
+											качеств напитков.
+										</li>
+										<li class="solutions__data-more-item">
+											<strong>Оседание железа</strong>, которое загрязняет оборудование и
+											внутренние стенки трубопроводов. Из-за этого развивается микрофлора,
+											ухудшается качество конечной продукции как по цвету, так и по вкусу, а также
+											увеличивается расход моющих средств.
+										</li>
+										<li class="solutions__data-more-item">
+											<strong>Вероятность биологического заражения</strong>, о чем свидетельствуют
+											повышенные значения перманганатной окисляемости и органических веществ.
+										</li>
+										<li class="solutions__data-more-item">
+											<strong>Нарушение солевого состава</strong>, которое может повлиять на
+											вкусовые качества производимой продукции, например, привести к появлению
+											горечи или постороннего привкуса.
+										</li>
+									</ul>
+									<p>
+										Вода для пищевого производства должна соответствовать самым высоким
+										требованиям по качеству и составу, ведь она оказывает влияние не только на
+										вкусовые характеристики и безопасность продукции, но и срок службы
+										оборудования.
+									</p>
+									<p>
+										Мы готовы предоставить проект подготовки воды, поступающей из любых
+										источников. И разработать при этом индивидуальную схему, чтобы расходы на
+										очистку были оптимальными.
+									</p>
+								</div>
+							</div>
+							<div class="solutions__image">
+								<picture><source srcset="img/solutions-1.webp" type="image/webp"><img src="img/solutions-1.png" alt="" /></picture>
+							</div>
+						</div>
+						<div class="solutions__show-more">
+							<button class="button" class="show-more" id="showMore">Смотреть еще</button>
+						</div>
+					</div>
+					<div class="solutions__content solutions__data-more" data-showmore>
+						<div class="solutions__wrapper">
+							<div class="solutions__data">
+								<h3 class="solutions__data-title">Нефтяная отрасль</h3>
+								<p class="solutions__data-text">
+									Предприятия нефтехимической промышленности потребляют огромное количество воды.
+								</p>
+								<p>Она используется для различных целей:</p>
+								<ul class="solutions__data-more-list">
+									<li class="solutions__data-more-item">
+										Приготовления растворов, смазочно-охлаждающих жидкостей и эмульсий;
+									</li>
+
+									<li class="solutions__data-more-item">
+										Подпитки котлов и другого технологического оборудования;
+									</li>
+									<li class="solutions__data-more-item">
+										Получения пара с требуемыми параметрами;
+									</li>
+									<li class="solutions__data-more-item">
+										Производства химической продукции широкого спектра назначения;
+									</li>
+									<li class="solutions__data-more-item">
+										В качестве теплоносителя (в горячем и парообразном состоянии) и хладагента для
+										химической аппаратуры, а также растворителя твердых, жидких и газообразных
+										веществ;
+									</li>
+									<li>В установках охлаждения и конденсации различных продуктов дистилляции.</li>
+								</ul>
+								<p>
+									От того, насколько хорошо подготовлена вода в нефтедобывающей и перерабатывающей
+									отрасли, зависит качество выпускаемой продукции и срок службы технологического
+									оборудования.
+								</p>
+								<p>
+									Одним из самых важных моментов является очистка пластовых вод — они агрессивны,
+									способствуют появлению коррозии оборудования, нарушают герметичность скважин и
+									негативно влияют на окружающую среду.
+								</p>
+								<p>
+									В зависимости от назначения используемой воды необходимо тщательно прорабатывать
+									инженерные решения, а также подбирать современные и надежные устройства для
+									очистки.
+								</p>
+								<p>
+									Грамотно составленная система подготовки воды позволит предотвратить появление
+									накипи и коррозии, обеспечить необходимые параметры питательной, подпиточной
+									воды и пара, сократить расход реагентов и затраты на ремонт оборудования, а
+									также автоматизировать процесс водоочистки.
+								</p>
+								<p>
+									Мы более 20 лет успешно реализуем проекты в области подготовки воды для
+									различных предприятий нефтехимической и добывающей промышленности. Обеспечим и
+									вас водой требуемого качества.
+								</p>
+							</div>
+							<div class="solutions__image">
+								<picture><source srcset="img/solutions-2.webp" type="image/webp"><img src="img/solutions-2.png" alt="" /></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="tech" id="tech">
+				<div class="tech__container">
+					<h2 class="tech__title _title">Технологии</h2>
+					<div data-tabs class="tech-tabs">
+						<nav data-tabs-titles class="tech-tabs__navigation">
+							<button type="button" class="tech-tabs__title _tab-active">
+								Напорная фильтрация
+							</button>
+							<button type="button" class="tech-tabs__title">Ультрафильтрация</button>
+							<button type="button" class="tech-tabs__title">Обратный осмос</button>
+						</nav>
+						<div data-tabs-body class="tech-tabs__content">
+							<div class="tech-tabs__body">
+								<div class="tech-tabs__body-wrapper">
+									<img src="img/tech-icon.svg" alt="tech icon" class="complete-tabs__body-icon" />
+									<div class="tech-tabs__body-text">
+										Система фильтрации, мод. RFA, первичных и сточных вод, разделена на 2
+										категории:— Фильтрация с использованием кварцевого песка;— Фильтрация методом
+										адсорбции с помощью активированного угля или цеолита. Фильтр из кварцевого
+										песка захватывает взвешенные частицы, имеющие размер в 20 мкм. Фильтр из
+										активированного угля захватывает коллоидные и взвешенные частицы.
+									</div>
+								</div>
+							</div>
+							<div class="tech-tabs__body">
+								<div class="tech-tabs__body-wrapper">
+									<img src="img/tech-icon.svg" alt="tech icon" class="complete-tabs__body-icon" />
+									<div class="tech-tabs__body-text">Система ультрафильтрации</div>
+								</div>
+							</div>
+							<div class="tech-tabs__body">
+								<div class="tech-tabs__body-wrapper">
+									<img src="img/tech-icon.svg" alt="tech icon" class="complete-tabs__body-icon" />
+									<div class="tech-tabs__body-text">Обратный осмос</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="complete" id="complete">
+				<div class="complete__container">
+					<h2 class="complete__title _title">Комплектующие</h2>
+					<div data-tabs class="complete-tabs">
+						<nav data-tabs-titles class="complete-tabs__navigation">
+							<button type="button" class="complete-tabs__title _tab-active">Мембраны</button>
+							<button type="button" class="complete-tabs__title">Мембранные корпуса</button>
+							<button type="button" class="complete-tabs__title">Уф модули</button>
+						</nav>
+						<div data-tabs-body class="complete-tabs__content">
+							<div class="complete-tabs__body">
+								<div class="complete-tabs__body-wrapper">
+									<img src="img/complete.svg" alt="complete icon" class="complete-tabs__body-icon" />
+									<div class="complete-tabs__body-text">
+										Система фильтрации, мод. RFA, первичных и сточных вод, разделена на 2
+										категории:— Фильтрация с использованием кварцевого песка;— Фильтрация методом
+										адсорбции с помощью активированного угля или цеолита. Фильтр из кварцевого
+										песка захватывает взвешенные частицы, имеющие размер в 20 мкм. Фильтр из
+										активированного угля захватывает коллоидные и взвешенные частицы.
+										<a href="" class="complete-tabs__body-link button">Смотреть товар</a>
+									</div>
+								</div>
+							</div>
+							<div class="complete-tabs__body">
+								<div class="complete-tabs__body-wrapper">
+									<img src="img/complete.svg" alt="complete icon" class="complete-tabs__body-icon" />
+									<div class="complete-tabs__body-text">
+										Система ультрафильтрации
+										<a href="" class="complete-tabs__body-link button">Смотреть товар</a>
+									</div>
+								</div>
+							</div>
+							<div class="complete-tabs__body">
+								<div class="complete-tabs__body-wrapper">
+									<img src="img/complete.svg" alt="complete icon" class="complete-tabs__body-icon" />
+									<div class="complete-tabs__body-text">
+										Обратный осмос
+										<a href="" class="complete-tabs__body-link button">Смотреть товар</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="services" id="services">
+				<div class="services__container-big">
+					<h2 class="services__title _title">Услуги</h2>
+					<ul class="services__list">
+						<li class="services__item">
+							<a href="#" class="services__link">
+								<div class="services__item-body">
+									<picture><source srcset="img/services-image.webp" type="image/webp"><img src="img/services-image.png" alt="image" /></picture>
+									<h3 class="services__item-title">Расчет и подбор</h3>
+								</div>
+								<span class="services__item-link button _fw">Подробнее</span>
+							</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<picture><source srcset="img/services-image.webp" type="image/webp"><img src="img/services-image.png" alt="image" /></picture>
+								<h3 class="services__item-title">ПИР</h3>
+							</div>
+							<a href="#" class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<picture><source srcset="img/services-image.webp" type="image/webp"><img src="img/services-image.png" alt="image" /></picture>
+								<h3 class="services__item-title">ПНР + ШМР</h3>
+							</div>
+							<a href="#" class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<picture><source srcset="img/services-image.webp" type="image/webp"><img src="img/services-image.png" alt="image" /></picture>
+								<h3 class="services__item-title">Аудит</h3>
+							</div>
+							<a href="#" class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<picture><source srcset="img/services-image.webp" type="image/webp"><img src="img/services-image.png" alt="image" /></picture>
+								<h3 class="services__item-title">ПНР + ШМР</h3>
+							</div>
+							<a href="#" class="services__item-link button _fw">Подробнее</a>
+						</li>
+						<li class="services__item">
+							<div class="services__item-body">
+								<picture><source srcset="img/services-image.webp" type="image/webp"><img src="img/services-image.png" alt="image" /></picture>
+								<h3 class="services__item-title">Аудит</h3>
+							</div>
+							<a href="#" class="services__item-link button _fw">Подробнее</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="cert" id="cert">
+				<div class="cert__container">
+					<h2 class="cert__title _title">Сертификаты</h2>
+					<h3 class="cert__subtitle">Подтвержденное качество и гарантия надежности</h3>
+					<p class="cert__descr">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio amet aut fugit quaerat
+						odit vero enim voluptas blanditiis rem culpa?
+					</p>
+					<div class="cert__wrapper">
+						<div class="cert__slider swiper">
+							<div class="cert__inner swiper-wrapper">
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)232323fdsfdsf fdsfsd f232323
+												Заключение 719_Микробор Композит (2022.03)232323fdsfdsf fdsfsd f232323
+												Заключение 719_Микробор Композит (2022.03)232323fdsfdsf fdsfsd f232323
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="cert__slide swiper-slide">
+									<div class="cert__slide-content">
+										<div class="cert__slide-image">
+											<picture><source srcset="img/cert.webp" type="image/webp"><img src="img/cert.jpg" alt="cert" /></picture>
+										</div>
+										<div class="cert__slide-data">
+											<span class="cert__slide-title">
+												Заключение 719_Микробор Композит (2022.03)
+											</span>
+											<a href="#" class="cert__slide-download">
+												<img src="img/pdf-icon.svg" alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<button class="swiper-button-prev">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+							</svg>
+						</button>
+						<button class="swiper-button-next">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="map">
+				<div class="map__block" id="map_petersburg"></div>
+				<div class="map__block" id="map_moscow"></div>
+			</section>
+		</main>
+		<footer class="footer" id="footer">
+			<div class="footer__container">
+				<div class="footer__items">
+					<div class="footer__item">
+						<div class="footer__item-title">МОСКВА</div>
+						<div class="footer__item-descr">Производственная зона <br> Мурино,Круговой проезд д.1 пр. <br> Энгельса 154,
+							офис 467
+						</div>
+						<a href="tel:88002502360" class="footer__item-phone">8 800 250-23-60</a>
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-title">САНКТ-ПЕТЕРБУРГ</div>
+						<div class="footer__item-descr">ул. Орджоникидзе, д.11, стр. 1А, офис 1.</div>
+						<a href="tel:+74952344172" class="footer__item-phone">+7 495 234-41-72</a>
+
+					</div>
+					<div class="footer__item">
+						<div class="footer__item-title">© 2022,ЛенРО</div>
+						<div class="footer__item-descr">Водоподготовка для профессионалов</div>
+						<a href="mailto:lenro@lenro.ru" class="footer__item-phone">lenro@lenro.ru</a>
+					</div>
+				</div>
+				<span class="footer__item-sub">Предложение не является публичной офертой</span>
+			</div>
+		</footer>
+	</div>
+	<div id="productForm" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<form class="popup__content">
+				<div class="popup__heading">
+					<div class="popup__title" id="productName">Название модели</div>
+					<button data-close class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+				<div class="popup__body">
+					<input type="hidden" id="product" />
+					<div class="popup__input-group">
+						<label for="name" class="popup__label">Ваше имя</label>
+						<input autocomplete="off" type="text" name="form[]" id="name" placeholder="Введите ваше имя " class="popup__input" />
+					</div>
+					<div class="popup__input-group">
+						<label for="email" class="popup__label">Ваш еmail</label>
+						<input autocomplete="off" type="email" id="email" name="form[]" placeholder="Введите ваш email " class="popup__input" />
+					</div>
+					<button type="button" class="popup__button _fw">Отправить</button>
+					<div class="popup__description">
+						Оставляя заявку, Вы даете согласие на обработку своих персональных данных.
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="callbackForm" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<form class="popup__content">
+				<div class="popup__heading">
+					<div class="popup__title">Заказать звонок</div>
+					<button data-close class="popup__close">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+						</svg>
+					</button>
+				</div>
+				<div class="popup__body">
+					<input type="hidden" id="product" />
+					<div class="popup__input-group">
+						<label for="name" class="popup__label">Ваше имя</label>
+						<input autocomplete="off" type="text" name="form[]" id="name" placeholder="Введите ваше имя " class="popup__input input" />
+					</div>
+					<div class="popup__input-group">
+						<label for="email" class="popup__label">Ваш еmail</label>
+						<input autocomplete="off" type="email" id="email" name="form[]" placeholder="Введите ваш email " class="popup__input input" />
+					</div>
+					<div class="popup__input-group">
+						<label for="email" class="popup__label">Ваш номер телефона</label>
+						<input autocomplete="off" type="email" id="email" name="form[]" placeholder="Введите ваш номер телефона" class="popup__input input tel" />
+					</div>
+					<button type="button" class="popup__button _fw">Отправить</button>
+					<div class="popup__description">
+						Оставляя заявку, Вы даете согласие на обработку своих персональных данных.
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<!-- <script src="//api-maps.yandex.ru/3.0/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230308212759"></script> -->
+	<script src="js/app.min.js?_v=20230308212759"></script>
+</body>
+
+</html>

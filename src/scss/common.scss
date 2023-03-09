@@ -1,17 +1,17 @@
 // Заголовки, загальні БЕМ блоки та інше...
 section {
-  @include adaptiveValue("padding-top", 100, 30);
-  @include adaptiveValue("padding-bottom", 100, 30);
+  @include adaptiveValue('padding-top', 70, 30);
+  @include adaptiveValue('padding-bottom', 70, 30);
 }
 
 .page {
-  @include adaptiveValue("padding-top", 120, 50);
-  @include adaptiveValue("padding-bottom", 100, 50);
+  @include adaptiveValue('padding-top', 120, 80);
+  @include adaptiveValue('padding-bottom', 100, 50);
 }
 
 ._title {
-  @include adaptiveValue("font-size", 48, 25);
-  @include adaptiveValue("margin-bottom", 50, 25);
+  @include adaptiveValue('font-size', 48, 30);
+  @include adaptiveValue('margin-bottom', 50, 25);
   line-height: math.div(58, 48);
   text-align: center;
   font-weight: 500;
@@ -83,8 +83,22 @@ section {
       font-size: rem(26);
       transition: color 0.2s ease 0s;
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: rem(20);
+      svg {
+        transition: all 0.3s ease 0s;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%);
+      }
       &._tab-active {
         color: $redColor;
+        svg {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+        }
       }
       @media (any-hover: hover) {
         &:hover {
@@ -118,35 +132,103 @@ section {
   }
 }
 
-.swiper__buttons {
-  border: 1px solid rgba(0, 0, 0, 0.17);
-  border-radius: 4px;
-  display: grid;
-  place-items: center;
-  @include adaptiveValue("min-width", 260, 200);
-  display: none;
-  @media (min-width:$pc){
-     display: grid; 
-  }
-}
-
 .swiper-button-next,
 .swiper-button-prev {
   position: relative;
   z-index: 10;
   cursor: pointer;
-  svg  {
-    @include adaptiveValue("width", 100, 50);
-    @include adaptiveValue("height", 100, 50);
-  }
-  svg path {
-    transition: all 0.2s ease 0s;
-  }
+  width: 100px !important;
+  color: #000 !important;
+  transition: all 0.2s ease 0s;
   @media (any-hover: hover) {
     &:hover {
-      svg path {
-        fill: #d52628;
+      color: $redColor !important;
+    }
+  }
+  svg {
+    @include adaptiveValue('width', 100, 50);
+    @include adaptiveValue('height', 100, 50);
+  }
+  &::after {
+    display: none;
+  }
+}
+
+.related {
+  &-button {
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    @include adaptiveValue('min-width', 260, 200);
+    display: none;
+    transition: all 0.2s ease 0s;
+    svg path {
+      transition: fill 0.2s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        border: 1px solid #d52628;
+        svg path {
+          fill: $redColor;
+        }
       }
     }
+    @media (min-width: $pc) {
+      display: grid;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    gap: rem(20);
+  }
+  &__slide {
+    border-radius: rem(10);
+    transition: transform 0.3s ease 0s;
+    overflow: hidden;
+  }
+
+  &__item-body {
+    position: relative;
+    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: rem(300);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      pointer-events: none;
+    }
+  }
+  &__item-image-ibg {
+    padding-bottom: percent(424, 400);
+    img {
+      max-width: 100%;
+      transition: transform 0.3s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  &__item-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: rem(10);
+    font-weight: 500;
+    font-size: rem(28);
+    color: #fff;
+    z-index: 2;
+  }
+  &__item-link {
+    display: block;
+    max-width: 100%;
+    border-radius: 0 0 rem(10) rem(10);
   }
 }

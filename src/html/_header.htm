@@ -1,9 +1,7 @@
 <header class="header">
   <div class="header__container-big">
     <button type="button" class="menu__icon icon-menu"><span></span></button>
-    <a href="index.html" class="header__logo"
-      ><img src="@img/logo.png" alt="logo"
-    /></a>
+    <a href="index.html" class="header__logo"><img src="@img/logo.png" alt="logo" /></a>
     <div class="header__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
@@ -14,26 +12,10 @@
                 height="15"
                 viewBox="0 0 24 15"
                 fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1H23"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M1 8H23"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M1 14H12"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M1 8H23" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M1 14H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
               </svg>
               КАТАЛОГ
               <span class="menu-catalog__arrow">
@@ -43,13 +25,11 @@
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="w-6 h-6"
-                >
+                  class="w-6 h-6">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
               </span>
             </button>
@@ -72,9 +52,7 @@
                 </ul>
               </div>
               <div class="menu-catalog__body-item">
-                <div class="menu-catalog__title">
-                  УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ
-                </div>
+                <div class="menu-catalog__title">УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ</div>
                 <ul class="menu-catalog__list">
                   <li class="menu-catalog__list-item">
                     <a href="#"> Категория #1</a>
@@ -86,8 +64,6 @@
               </div>
             </div>
           </li>
-
-	
 
           <li class="menu__item"><a href="#" class="menu__link">УСЛУГИ</a></li>
           <li class="menu__item">
@@ -108,12 +84,8 @@
 
     <div class="header__callback">
       <span class="header__callback-heading">Звонки по России бесплатно</span>
-      <a href="tel:88002502360" class="header__callback-title"
-        >8 800 250-23-60</a
-      >
-      <a href="tel:88002502360" class="header__callback-link"
-        >Заказать звонок</a
-      >
+      <a href="tel:88002502360" class="header__callback-title">8 800 250-23-60</a>
+      <button class="header__callback-link" data-popup="#callbackForm">Заказать звонок</button>
     </div>
 
     <button class="header__search">
@@ -123,9 +95,7 @@
     <div class="header__catalog catalog">
       <div class="catalog__container-big">
         <div class="catalog__head">
-          <a href="/" class="header__logo"
-            ><img src="@img/logo.png" alt="logo"
-          /></a>
+          <a href="/" class="header__logo"><img src="@img/logo.png" alt="logo" /></a>
           <div class="catalog__head-title">Меню каталога</div>
           <button class="catalog__head-button">
             <svg
@@ -133,35 +103,59 @@
               height="30"
               viewBox="0 0 30 30"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M29.5 1L15.25 15M1 29L15.25 15M15.25 15L1 1L29.5 29"
-                stroke="black"
-              />
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M29.5 1L15.25 15M1 29L15.25 15M15.25 15L1 1L29.5 29" stroke="black" />
             </svg>
           </button>
         </div>
         <div class="catalog__body">
           <div data-tabs class="tabs tabs-catalog">
             <nav data-tabs-titles class="tabs-catalog__navigation">
-              <button type="button" class="tabs-catalog__title _tab-active">
+              <a href="test.com" target="_blank" class="tabs-catalog__title _tab-active">
                 МЕМБРАННЫЕ ЭЛЕМЕНТЫ
-              </button>
+                <svg
+                  width="52"
+                  height="16"
+                  viewBox="0 0 52 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM51.7071 8.70711C52.0976 8.31658 52.0976 7.68342 51.7071 7.29289L45.3431 0.928932C44.9526 0.538408 44.3195 0.538408 43.9289 0.928932C43.5384 1.31946 43.5384 1.95262 43.9289 2.34315L49.5858 8L43.9289 13.6569C43.5384 14.0474 43.5384 14.6805 43.9289 15.0711C44.3195 15.4616 44.9526 15.4616 45.3431 15.0711L51.7071 8.70711ZM1 9L51 9L51 7L1 7L1 9Z"
+                    fill="#D52628" />
+                </svg>
+              </a>
               <button type="button" class="tabs-catalog__title">
                 УЛЬТРАФИЛЬТРАЦИЯ / МИКРОФИЛЬТРАЦИЯ
+
+                <svg
+                  width="52"
+                  height="16"
+                  viewBox="0 0 52 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM51.7071 8.70711C52.0976 8.31658 52.0976 7.68342 51.7071 7.29289L45.3431 0.928932C44.9526 0.538408 44.3195 0.538408 43.9289 0.928932C43.5384 1.31946 43.5384 1.95262 43.9289 2.34315L49.5858 8L43.9289 13.6569C43.5384 14.0474 43.5384 14.6805 43.9289 15.0711C44.3195 15.4616 44.9526 15.4616 45.3431 15.0711L51.7071 8.70711ZM1 9L51 9L51 7L1 7L1 9Z"
+                    fill="#D52628" />
+                </svg>
               </button>
               <button type="button" class="tabs-catalog__title">
                 ХИМИЧЕСКИЕ РЕАГЕНТЫ
+                <svg
+                  width="52"
+                  height="16"
+                  viewBox="0 0 52 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM51.7071 8.70711C52.0976 8.31658 52.0976 7.68342 51.7071 7.29289L45.3431 0.928932C44.9526 0.538408 44.3195 0.538408 43.9289 0.928932C43.5384 1.31946 43.5384 1.95262 43.9289 2.34315L49.5858 8L43.9289 13.6569C43.5384 14.0474 43.5384 14.6805 43.9289 15.0711C44.3195 15.4616 44.9526 15.4616 45.3431 15.0711L51.7071 8.70711ZM1 9L51 9L51 7L1 7L1 9Z"
+                    fill="#D52628" />
+                </svg>
               </button>
-              <!-- <button type="button" class="tabs-catalog__title">ГОТОВЫЕ СИСТЕМЫ</button> -->
             </nav>
             <div data-tabs-body class="tabs__content">
               <div class="tabs__body">
                 <ul class="tabs__body-list">
-                  <li class="tabs__body-item">
-                    Мембранные элементы Hydranautics
-                  </li>
+                  <li class="tabs__body-item">Мембранные элементы Hydranautics</li>
                   <li class="tabs__body-item">Мембранны элементы LG</li>
                   <li class="tabs__body-item">Взаимозаменяемость мембран</li>
                   <li class="tabs__body-item">Мембранные элементы KeenSen</li>
@@ -169,9 +163,7 @@
               </div>
               <div class="tabs__body">
                 <ul class="tabs__body-list">
-                  <li class="tabs__body-item">
-                    2Мембранные элементы Hydranautics
-                  </li>
+                  <li class="tabs__body-item">2Мембранные элементы Hydranautics</li>
                   <li class="tabs__body-item">Мембранны элементы LG</li>
                   <li class="tabs__body-item">Взаимозаменяемость мембран</li>
                   <li class="tabs__body-item">Мембранные элементы KeenSen</li>
@@ -179,9 +171,7 @@
               </div>
               <div class="tabs__body">
                 <ul class="tabs__body-list">
-                  <li class="tabs__body-item">
-                    3Мембранные элементы Hydranautics
-                  </li>
+                  <li class="tabs__body-item">3Мембранные элементы Hydranautics</li>
                   <li class="tabs__body-item">Мембранны элементы LG</li>
                   <li class="tabs__body-item">Взаимозаменяемость мембран</li>
                   <li class="tabs__body-item">Мембранные элементы KeenSen</li>

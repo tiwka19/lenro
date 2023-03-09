@@ -1,32 +1,12 @@
-/*
-Документація по роботі у шаблоні: 
-Документація слайдера: https://swiperjs.com/
-Сніппет(HTML): swiper
-*/
+import Swiper, { Navigation, Autoplay, Pagination } from 'swiper';
 
-// Підключаємо слайдер Swiper з node_modules
-// При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
-// Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation, Autoplay, Pagination } from "swiper";
-/*
-Основні модулі слайдера:
-Navigation, Pagination, Autoplay, 
-EffectFade, Lazy, Manipulation
-Детальніше дивись https://swiperjs.com/
-*/
+// import '../../scss/libs/swiper.scss';
+import 'swiper/css/bundle';
+import '../../scss/base/swiper.scss';
 
-// Стилі Swiper
-// Базові стилі
-import "../../scss/base/swiper.scss";
-// Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
-// Повний набір стилів з node_modules
-// import 'swiper/css';
-
-// Ініціалізація слайдерів
 function initSliders() {
-  if (document.querySelector(".hero__slider")) {
-    new Swiper(".swiper", {
+  if (document.querySelector('.hero__slider')) {
+    new Swiper('.hero__slider', {
       modules: [Navigation],
       observer: true,
       observeParents: true,
@@ -34,54 +14,46 @@ function initSliders() {
       spaceBetween: 15,
       autoHeight: true,
       speed: 800,
-
-      // Кнопки "вліво/вправо"
       navigation: {
-        prevEl: ".hero__slider-prev",
-        nextEl: ".hero__slider-next",
+        prevEl: '.hero__slider-prev',
+        nextEl: '.hero__slider-next',
       },
-      /*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
-      // Події
       on: {},
     });
   }
-  if (document.querySelector(".products__slider")) {
-    new Swiper(".products__slider", {
+  if (document.querySelector('.article__slider')) {
+    new Swiper('.article__slider', {
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      autoHeight: true,
+      speed: 800,
+      navigation: {
+        prevEl: '.hero__slider-prev',
+        nextEl: '.hero__slider-next',
+      },
+      on: {},
+    });
+  }
+  if (document.querySelector('.products__slider')) {
+    new Swiper('.products__slider', {
       modules: [Navigation, Autoplay, Pagination],
       observer: true,
       observeParents: true,
       spaceBetween: 15,
       autoHeight: true,
       speed: 800,
+      loop: true,
+      grabCursor: true,
       autoplay: {
-        delay: 1500,
+        delay: 2000,
       },
       loop: true,
       navigation: {
-        nextEl: ".swiper-button-next",
+        nextEl: '.related-button',
       },
-
       breakpoints: {
         640: {
           slidesPerView: 2,
@@ -92,48 +64,90 @@ function initSliders() {
           spaceBetween: 20,
         },
       },
-
       pagination: {
-        el: ".swiper-pagination",
+        el: '.swiper-pagination',
+        clickable: true,
       },
-
-      on: {},
+    });
+  }
+  if (document.querySelector('.related__slider')) {
+    new Swiper('.related__slider', {
+      modules: [Navigation, Autoplay],
+      observer: true,
+      observeParents: true,
+      spaceBetween: 15,
+      speed: 800,
+      loop: true,
+      navigation: {
+        nextEl: '.related-button',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  }
+  if (document.querySelector('.projects__slider')) {
+    new Swiper('.projects__slider', {
+      modules: [Autoplay, Pagination],
+      spaceBetween: 15,
+      autoHeight: true,
+      speed: 800,
+      autoplay: {
+        delay: 2000,
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+  if (document.querySelector('.cert__slider')) {
+    new Swiper('.cert__slider', {
+      modules: [Autoplay, Navigation, Pagination],
+      spaceBetween: 15,
+      autoHeight: true,
+      speed: 800,
+      observer: true,
+      observeParents: true,
+      grabCursor: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1420: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
     });
   }
 }
-// Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
-function initSlidersScroll() {
-  let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
-  if (sliderScrollItems.length > 0) {
-    for (let index = 0; index < sliderScrollItems.length; index++) {
-      const sliderScrollItem = sliderScrollItems[index];
-      const sliderScrollBar =
-        sliderScrollItem.querySelector(".swiper-scrollbar");
-      const sliderScroll = new Swiper(sliderScrollItem, {
-        observer: true,
-        observeParents: true,
-        direction: "vertical",
-        slidesPerView: "auto",
-        freeMode: {
-          enabled: true,
-        },
-        scrollbar: {
-          el: sliderScrollBar,
-          draggable: true,
-          snapOnRelease: false,
-        },
-        mousewheel: {
-          releaseOnEdges: true,
-        },
-      });
-      sliderScroll.scrollbar.updateSize();
-    }
-  }
-}
 
-window.addEventListener("load", function (e) {
-  // Запуск ініціалізації слайдерів
+window.addEventListener('load', function (e) {
   initSliders();
-  // Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-  //initSlidersScroll();
 });

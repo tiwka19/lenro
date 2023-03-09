@@ -1,46 +1,78 @@
 .article {
-  padding-top: rem(50);
+  @media (max-width: $mobile) {
+    padding-top: rem(50);
+  }
   padding-bottom: rem(50);
-  &__head {
+  &__slider {
+    margin-bottom: rem(30);
+  }
+  &__slide {
+    @include adaptiveValue('min-height', 600, 300);
+    max-height: rem(600);
+    border-radius: rem(13);
+    background: url('@img/article.png') 0 0 no-repeat;
+    background-size: cover;
+    background-position: center;
     position: relative;
     overflow: hidden;
-    border-radius: rem(10);
-    margin-bottom: rem(30);
-    img {
-      max-width: 100%;
-      @media (max-width: $mobile) {
-        border-radius: rem(10);
-      }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.4);
     }
   }
-  &__title {
+
+  &__slide-title {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
     color: #fff;
-    @include adaptiveValue("font-size", 44, 25);
-    @media (max-width: $mobile) {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: translate(0);
-      color: #000;
-      text-align: center;
-      font-weight: 500;
-      margin-bottom: rem(15);
-    }
+    @include adaptiveValue('font-size', 48, 25);
+    font-weight: 600;
+    z-index: 2;
   }
+
+  &__slider-button {
+    position: absolute;
+    bottom: rem(20);
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 rem(15);
+  }
+
   &__content {
+    max-width: $tablet;
+    margin: 0 auto;
     h2 {
       margin-bottom: rem(15);
-      font-size: rem(24);
+      @include adaptiveValue('font-size', 28, 22);
       font-weight: 500;
     }
     p {
       padding-bottom: rem(15);
       font-size: rem(20);
       line-height: math.div(28, 20);
+    }
+
+    ul,
+    ol {
+      padding-bottom: rem(15);
+      font-size: rem(20);
+      line-height: math.div(28, 20);
+      padding-left: rem(25);
+    }
+    ul li {
+      list-style-type: disc;
     }
   }
 }
