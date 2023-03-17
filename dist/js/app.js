@@ -4221,12 +4221,17 @@
         }
         function initSliders() {
             if (document.querySelector(".hero__slider")) new core(".hero__slider", {
-                modules: [ Navigation ],
+                modules: [ Navigation, Autoplay ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 15,
+                grabCursor: true,
                 autoHeight: true,
+                loop: true,
+                autoplay: {
+                    delay: 4e3
+                },
                 speed: 800,
                 navigation: {
                     prevEl: ".hero__slider-prev",
@@ -4241,6 +4246,7 @@
                 slidesPerView: 1,
                 spaceBetween: 15,
                 autoHeight: true,
+                loop: true,
                 speed: 800,
                 navigation: {
                     prevEl: ".hero__slider-prev",
@@ -4260,7 +4266,6 @@
                 autoplay: {
                     delay: 2e3
                 },
-                loop: true,
                 navigation: {
                     nextEl: ".related-button"
                 },
@@ -4307,6 +4312,7 @@
                 modules: [ Autoplay, Pagination ],
                 spaceBetween: 15,
                 autoHeight: true,
+                loop: true,
                 speed: 800,
                 autoplay: {
                     delay: 2e3
@@ -4325,6 +4331,7 @@
                 observer: true,
                 observeParents: true,
                 grabCursor: true,
+                loop: true,
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev"

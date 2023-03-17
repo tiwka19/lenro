@@ -7,12 +7,17 @@ import '../../scss/base/swiper.scss';
 function initSliders() {
   if (document.querySelector('.hero__slider')) {
     new Swiper('.hero__slider', {
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
       spaceBetween: 15,
+      grabCursor: true,
       autoHeight: true,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
       speed: 800,
       navigation: {
         prevEl: '.hero__slider-prev',
@@ -29,6 +34,7 @@ function initSliders() {
       slidesPerView: 1,
       spaceBetween: 15,
       autoHeight: true,
+      loop: true,
       speed: 800,
       navigation: {
         prevEl: '.hero__slider-prev',
@@ -50,7 +56,6 @@ function initSliders() {
       autoplay: {
         delay: 2000,
       },
-      loop: true,
       navigation: {
         nextEl: '.related-button',
       },
@@ -101,6 +106,7 @@ function initSliders() {
       modules: [Autoplay, Pagination],
       spaceBetween: 15,
       autoHeight: true,
+      loop: true,
       speed: 800,
       autoplay: {
         delay: 2000,
@@ -121,6 +127,7 @@ function initSliders() {
       observer: true,
       observeParents: true,
       grabCursor: true,
+      loop: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

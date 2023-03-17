@@ -7,7 +7,7 @@
     position: relative;
   }
   &__slide {
-    @include adaptiveValue('min-height', 600, 400);
+    @include adaptiveValue('min-height', 600, 200);
     max-height: rem(600);
     border-radius: rem(13);
     background: url('@img/slider-1.png') 0 0 no-repeat;
@@ -32,8 +32,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     min-width: rem(350);
+    height: 100%;
+    @media (max-width: $mobileSmall) {
+      position: relative;
+      transform: translate(0);
+    }
 
     @media (max-width: $tablet) {
       left: 0;
@@ -66,6 +70,7 @@
     width: 100%;
     border-radius: rem(10);
     transition: background-color 0.2s ease 0s;
+
     @media (any-hover: hover) {
       &:hover {
         background-color: $redColorAlt;
@@ -324,6 +329,8 @@
   }
   &__image {
     flex: 0 0 percent(672, 1320);
+    border-radius: rem(15);
+    overflow: hidden;
     img {
       max-width: 100%;
     }
