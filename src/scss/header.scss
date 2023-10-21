@@ -6,8 +6,7 @@
   left: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 49;
-
+  z-index: 150;
   &._header-scroll {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   }
@@ -21,14 +20,14 @@
   &__logo {
     @media (max-width: $tablet) {
       flex: 1 1 auto;
-      justify-content: center;
-      text-align: center;
+      justify-content: flex-start;
     }
   }
   &__logo img {
     max-width: rem(200);
     @media (max-width: $mobileSmall) {
-      max-width: rem(170);
+    
+      @include adaptiveValue("max-width", 170, 150);
     }
   }
   &__callback {
@@ -38,7 +37,19 @@
       display: none;
     }
   }
-  &__callback-heading {
+  &__callback--mobile {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    .header__callback-link {
+      width: rem(30);
+      height: rem(30);
+    }
+  }
+  &__callback-phone &__callback-heading {
     display: inline-block;
     margin-bottom: rem(5);
     font-size: rem(16);

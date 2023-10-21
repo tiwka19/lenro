@@ -70,6 +70,8 @@
     }
     &__image {
       flex: 0 0 percent(672, 1600);
+      border-radius: rem(15);
+      overflow: hidden;
       img {
         max-width: 100%;
       }

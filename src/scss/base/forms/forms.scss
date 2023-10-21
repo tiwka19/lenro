@@ -1,28 +1,28 @@
 //<FORM>
 // Сніппет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+  &__row {
+  }
+  &__column {
+  }
+  &__line {
+  }
+  &__input {
+  }
+  &__button {
+  }
+  &__error {
+  }
 }
 //</FORM>
 
 // <BUTTONS>
 // Сніппет (HTML): btn
-@import "button";
+@import 'button';
 
 // <INPUTS>
 // Сніппет (HTML): inp
-@import "input";
+@import 'input';
 
 // <CHECK>
 // Сніппет (HTML): chk
@@ -34,7 +34,7 @@
 
 // <SELECT>
 // Сніппет (HTML): sel
-// @import "select";
+@import 'select';
 
 // <RATING>
 // Сніппет (HTML): rating

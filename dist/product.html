@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230315134008">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230530111522">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230315134008"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230530111522"></script>
 
 
 </head>
@@ -93,9 +93,18 @@
 					<button class="header__callback-link" data-popup="#callbackForm">Заказать звонок</button>
 				</div>
 
-				<button class="header__search">
-					<img src="img/search.svg" alt="search" width="30px" />
-				</button>
+				<div class="header__callback--mobile">
+					<a href="" class="header__callback-link header__callback-phone">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+						</svg>
+					</a>
+					<a href="" class=" header__callback-link header__callback-email">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+						</svg>
+					</a>
+				</div>
 
 				<div class="header__catalog catalog">
 					<div class="catalog__container-big">
@@ -478,6 +487,12 @@
 			</div>
 		</footer>
 
+		<button class="scrollTop" id='scrollTopButton'>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFF" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+			</svg>
+		</button>
+
 	</div>
 	<div id="productForm" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
@@ -523,14 +538,6 @@
 				<div class="popup__body">
 					<input type="hidden" id="product" />
 					<div class="popup__input-group">
-						<label for="name" class="popup__label">Ваше имя</label>
-						<input autocomplete="off" type="text" name="form[]" id="name" placeholder="Введите ваше имя " class="popup__input input" />
-					</div>
-					<div class="popup__input-group">
-						<label for="email" class="popup__label">Ваш еmail</label>
-						<input autocomplete="off" type="email" id="email" name="form[]" placeholder="Введите ваш email " class="popup__input input" />
-					</div>
-					<div class="popup__input-group">
 						<label for="email" class="popup__label">Ваш номер телефона</label>
 						<input autocomplete="off" type="email" id="email" name="form[]" placeholder="Введите ваш номер телефона" class="popup__input input tel" />
 					</div>
@@ -542,8 +549,8 @@
 			</form>
 		</div>
 	</div>
-	<!-- <script src="//api-maps.yandex.ru/3.0/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230315134008"></script> -->
-	<script src="js/app.min.js?_v=20230315134008"></script>
+	<!-- <script src="//api-maps.yandex.ru/3.0/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230530111522"></script> -->
+	<script src="js/app.min.js?_v=20230530111522"></script>
 </body>
 
 </html>

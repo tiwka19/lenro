@@ -6,11 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230315134008">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230530111522">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230315134008"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230530111522"></script>
 
 
 </head>
@@ -93,9 +93,18 @@
 					<button class="header__callback-link" data-popup="#callbackForm">Заказать звонок</button>
 				</div>
 
-				<button class="header__search">
-					<img src="img/search.svg" alt="search" width="30px" />
-				</button>
+				<div class="header__callback--mobile">
+					<a href="" class="header__callback-link header__callback-phone">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+						</svg>
+					</a>
+					<a href="" class=" header__callback-link header__callback-email">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+						</svg>
+					</a>
+				</div>
 
 				<div class="header__catalog catalog">
 					<div class="catalog__container-big">
@@ -164,41 +173,44 @@
 			</div>
 		</header>
 
-		<main class="page">
-			<div class="about about-page">
-				<div class="about__container-big">
-					<div class="about__head">
-						<h1 class="about__title">
-							СОХРАНЯЯ ПРИРОДУ, ПРИУМНОЖАЕМ БОГАТСТВА
-						</h1>
-						<picture><source srcset="img/about.webp" type="image/webp"><img src="img/about.jpg" alt="about image" /></picture>
+		<main class="page page-about">
+			<div class="about">
+				<div class="about about__container">
+					<h1 class="about__title">О нас</h1>
+					<div class="about__navigation">
+						<ul class="about__navigation-list">
+							<li class="about__navigation-item">
+								<a href="#" data-goto="#values" data-goto-header data-goto-top="30" class="about__navitation-link">Ценности</a>
+							</li>
+							<li class="about__navigation-item">
+								<a href="#" data-goto="#mission" data-goto-header data-goto-top="30" class="about__navitation-link">Миссии</a>
+							</li>
+						</ul>
 					</div>
+
 				</div>
 				<div class="about__container">
 					<div class="about__content">
 						<div class="about__content-intro">
-							Компания ЛЕНРО более 15 лет специализируется на разработке и
-							производстве систем водоподготовки с использованием современных
-							мембранных технологических решений для промышленных предприятий
-							и частных домов.
+							Компания ЛЕНРО более 15 лет специализируется на разработке и производстве систем
+							водоподготовки с использованием современных мембранных технологических решений для
+							промышленных предприятий и частных домов.
 						</div>
 						<div class="about__data">
 							<div class="about__box">
 								<div class="about__box-data">
 									<h2>
-										Поиск грамотного инженерного решения с использованием
-										новейших ресурсосберегающих методик и технологий - наш
-										главный приоритет.
+										Поиск грамотного инженерного решения с использованием новейших
+										ресурсосберегающих методик и технологий - наш главный приоритет.
 									</h2>
 									<p>
-										Наши проекты соответствуют требованиям Законодательства РФ
-										и направлены на рациональное использование природных
-										ресурсов, сохранение и охрану окружающей среды.
+										Наши проекты соответствуют требованиям Законодательства РФ и направлены на
+										рациональное использование природных ресурсов, сохранение и охрану окружающей
+										среды.
 									</p>
 									<p>
-										А также разработанные системы подготовки/очистки воды
-										значительно сокращают эксплуатационные расходы предприятий
-										и организаций.
+										А также разработанные системы подготовки/очистки воды значительно сокращают
+										эксплуатационные расходы предприятий и организаций.
 									</p>
 								</div>
 								<div class="about__box-image">
@@ -211,30 +223,26 @@
 								</div>
 								<div class="about__box-data">
 									<h2>
-										Одним из приоритетных направлений деятельности компании
-										ЛЕНРО является разработка и внедрение современного
-										высокоэффективного оборудования для водоподготовки.
+										Одним из приоритетных направлений деятельности компании ЛЕНРО является
+										разработка и внедрение современного высокоэффективного оборудования для
+										водоподготовки.
 									</h2>
 									<p>
-										Компания имеет большой опыт в очистке воды для дальнейшего
-										её использования в различных направлениях.
+										Компания имеет большой опыт в очистке воды для дальнейшего её использования в
+										различных направлениях.
 									</p>
 									<p>
-										Являясь, прежде всего, инжиниринговой компанией, Мы ставим
-										перед собой задачу поиска грамотного инженерного решения
-										поставленных задач. Все технологии и проектируемые
-										водоочистные установки являются индивидуальными и
-										соответствуют условиям работы и требованиями, изложенным в
-										техническом задании Заказчика.
+										Являясь, прежде всего, инжиниринговой компанией, Мы ставим перед собой задачу
+										поиска грамотного инженерного решения поставленных задач. Все технологии и
+										проектируемые водоочистные установки являются индивидуальными и соответствуют
+										условиям работы и требованиями, изложенным в техническом задании Заказчика.
 									</p>
 								</div>
 							</div>
 						</div>
-
 						<div class="about__distr">
 							<h2 class="about__distr-title">
-								Компания ЛЕНРО является официальным дистрибьютором ведущих
-								мировых производителей:
+								Компания ЛЕНРО является официальным дистрибьютором ведущих мировых производителей:
 							</h2>
 							<div class="about__distr-list">
 								<div class="about__distr-item">
@@ -283,39 +291,88 @@
 							<div class="about__benefits-wrapper">
 								<div class="about__benefits-data">
 									<h2 class="about__benefits-title">
-										Преимущества, которые нам помогают добиваться успеха на
-										рынке с 2001 года:
+										Преимущества, которые нам помогают добиваться успеха на рынке с 2001 года:
 									</h2>
 									<ul class="about__benefits-list">
 										<li class="about__benefits-item">
-											Дилерские соглашения с мировыми производителями
-											комплектующих
+											Дилерские соглашения с мировыми производителями комплектующих
 										</li>
 										<li class="about__benefits-item">
 											Собственное производство установок обратного осмоса
 										</li>
-										<li class="about__benefits-item">
-											Индивидуальные проекты под ключ
-										</li>
+										<li class="about__benefits-item">Индивидуальные проекты под ключ</li>
 										<li class="about__benefits-item">
 											Гарантийное и постгарантийное обслуживание
 										</li>
 										<li class="about__benefits-item">
-											Отлаженная схема поставок, обеспечивающая постоянное
-											наличие на складе необходимых товаров
+											Отлаженная схема поставок, обеспечивающая постоянное наличие на складе
+											необходимых товаров
 										</li>
-										<li class="about__benefits-item">
-											Гибкость и креативность в решении задач
-										</li>
-										<li class="about__benefits-item">
-											Наличие собственной сервисной службы
-										</li>
+										<li class="about__benefits-item">Гибкость и креативность в решении задач</li>
+										<li class="about__benefits-item">Наличие собственной сервисной службы</li>
 									</ul>
 								</div>
 								<div class="about__benefits-decor">
 									<picture><source srcset="img/about-decor.webp" type="image/webp"><img src="img/about-decor.jpg" alt="about" /></picture>
 								</div>
 							</div>
+						</div>
+						<div class="about__mission" id="mission">
+							<div class="about__mission-item">
+								<h2 class="about__mission-title">МИССИЯ ЛЕНРО</h2>
+								<p class="about__mission-description">
+									«Совершенствуясь сегодня, создавать лучшее завтра».
+								</p>
+							</div>
+							<div class="about__mission-item">
+								<h2 class="about__mission-title">ВИДЕНИЕ ЛЕНРО</h2>
+								<p class="about__mission-description">
+									«Круг профессионалов с общими целями и интересами, которые мотивируют друг друга
+									на 100%-й результат, помогают и поддерживают друг друга, постоянно развиваются и
+									внедряют новейшие технологии и методы, легко адаптируются к изменениям и
+									сохраняют активную жизненную позицию во всех ситуациях».
+								</p>
+							</div>
+						</div>
+						<div class="about__values" id="values">
+							<h2 class="about__values-title">Ценности</h2>
+							<h3 class="about__values-subtitle">Основные ценности ГК ЛЕНРО</h3>
+							<ol class="about__values-list">
+								<li class="about__values-item">ПРОФЕССИОНАЛИЗМ во всем, что мы делаем.</li>
+								<li class="about__values-item">
+									Клиентоориентированность. победа вместе с партнером (внешний и внутренний).
+								</li>
+								<li class="about__values-item">
+									Нацеленность на результат. результат – это только 100%
+								</li>
+								<li class="about__values-item">Мы одна команда. ««мы» всегда больше чем «я»»</li>
+								<li class="about__values-item">Инициативность.</li>
+							</ol>
+						</div>
+						<div class="about__callback callback">
+							<form action="" class="callback__form">
+								<h2 class="callback__title">Форма обратной связи</h2>
+								<div class="callback__wrapper">
+									<div class="callback__row">
+										<input autocomplete="off" type="text" name="form[]" required placeholder="Ваше имя" class="callback__input" />
+										<input autocomplete="off" type="text" name="form[]" required placeholder="Ваш телефон" class="callback__input tel" />
+									</div>
+									<div class="callback__row">
+										<input autocomplete="off" type="email" required placeholder="Ваш e-mail" class="callback__input" />
+										<select data-class-modif="form">
+											<option value="" selected>Выберите офис</option>
+											<option value="moscow">Московский офис</option>
+											<option value="center">Центральный офис</option>
+										</select>
+									</div>
+									<div class="callback__message">
+										<textarea autocomplete="off" name="form[]" placeholder="Сообщение" class="input"></textarea>
+									</div>
+									<div class="callback__send">
+										<button class="callback__button button">Отправить заявку</button>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -345,6 +402,12 @@
 				<span class="footer__item-sub">Предложение не является публичной офертой</span>
 			</div>
 		</footer>
+
+		<button class="scrollTop" id='scrollTopButton'>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="#FFF" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFF" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+			</svg>
+		</button>
 
 	</div>
 	<div id="productForm" aria-hidden="true" class="popup">
@@ -391,14 +454,6 @@
 				<div class="popup__body">
 					<input type="hidden" id="product" />
 					<div class="popup__input-group">
-						<label for="name" class="popup__label">Ваше имя</label>
-						<input autocomplete="off" type="text" name="form[]" id="name" placeholder="Введите ваше имя " class="popup__input input" />
-					</div>
-					<div class="popup__input-group">
-						<label for="email" class="popup__label">Ваш еmail</label>
-						<input autocomplete="off" type="email" id="email" name="form[]" placeholder="Введите ваш email " class="popup__input input" />
-					</div>
-					<div class="popup__input-group">
 						<label for="email" class="popup__label">Ваш номер телефона</label>
 						<input autocomplete="off" type="email" id="email" name="form[]" placeholder="Введите ваш номер телефона" class="popup__input input tel" />
 					</div>
@@ -410,8 +465,8 @@
 			</form>
 		</div>
 	</div>
-	<!-- <script src="//api-maps.yandex.ru/3.0/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230315134008"></script> -->
-	<script src="js/app.min.js?_v=20230315134008"></script>
+	<!-- <script src="//api-maps.yandex.ru/3.0/?apikey=e3d6aae8-6b2d-433a-9223-398c13e48fed&lang=ru_RU&_v=20230530111522"></script> -->
+	<script src="js/app.min.js?_v=20230530111522"></script>
 </body>
 
 </html>

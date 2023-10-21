@@ -1,0 +1,40 @@
+<form action="" class="callback__form">
+  <h2 class="callback__title">Форма обратной связи</h2>
+  <div class="callback__wrapper">
+    <div class="callback__row">
+      <input
+        autocomplete="off"
+        type="text"
+        name="form[]"
+        required
+        placeholder="Ваше имя"
+        class="callback__input" />
+      <input
+        autocomplete="off"
+        type="text"
+        name="form[]"
+        required
+        placeholder="Ваш телефон"
+        class="callback__input tel" />
+    </div>
+    <div class="callback__row">
+      <input
+        autocomplete="off"
+        type="email"
+        required
+        placeholder="Ваш e-mail"
+        class="callback__input" />
+      <select data-class-modif="form">
+        <option value="" selected>Выберите офис</option>
+        <option value="moscow">Московский офис</option>
+        <option value="center">Центральный офис</option>
+      </select>
+    </div>
+    <div class="callback__message">
+      <textarea autocomplete="off" name="form[]" placeholder="Сообщение" class="input"></textarea>
+    </div>
+    <div class="callback__send">
+      <button class="callback__button button">Отправить заявку</button>
+    </div>
+  </div>
+</form>

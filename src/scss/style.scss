@@ -162,6 +162,7 @@ body {
 // Підключення стилів загальних елементів проекту
 @import 'common';
 @import 'toastify-js/src/toastify.css';
+@import './libs/tippy';
 
 // Підключення стилів окремих блоків
 @import 'header';
@@ -175,3 +176,4 @@ body {
 // Підключення стилів окремих сторінок
 @import 'home';
 @import 'about';
+@import 'contacts';

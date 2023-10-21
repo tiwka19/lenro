@@ -1,9 +1,13 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 // Підключення списку активних модулів
-import { menuClose, menuOpen } from './functions.js';
-import { flsModules } from './modules.js';
 import Toastify from 'toastify-js';
+import { flsModules } from './modules.js';
+import tippy from 'tippy.js';
 
+tippy('[data-tippy-content]', {
+  placement: 'top',
+  interactive: true,
+});
 
 const catalogDropdown = () => {
   const dropdownButton = document.querySelector('.menu-catalog button');
@@ -21,8 +25,7 @@ const catalogDropdown = () => {
 };
 catalogDropdown();
 
-const input = document.querySelector('.tel');
-
+const inputs = document.querySelectorAll('.tel');
 const prefixNumber = (str) => {
   if (str === '7') {
     return '7 (';
@@ -37,58 +40,42 @@ const prefixNumber = (str) => {
 };
 
 // ======================================
-input.addEventListener('input', (e) => {
-  const value = input.value.replace(/\D+/g, '');
-  const numberLength = 11;
+inputs.forEach((input) => {
+  input.addEventListener('input', (e) => {
+    const value = input.value.replace(/\D+/g, '');
+    const numberLength = 11;
 
-  let result;
-  if (input.value.includes('+8') || input.value[0] === '8') {
-    result = '';
-  } else {
-    result = '+';
-  }
-
-  //
-  for (let i = 0; i < value.length && i < numberLength; i++) {
-    switch (i) {
-      case 0:
-        result += prefixNumber(value[i]);
-        continue;
-      case 4:
-        result += ') ';
-        break;
-      case 7:
-        result += '-';
-        break;
-      case 9:
-        result += '-';
-        break;
-      default:
-        break;
+    let result;
+    if (input.value.includes('+8') || input.value[0] === '8') {
+      result = '';
+    } else {
+      result = '+';
     }
-    result += value[i];
-  }
-  //
-  input.value = result;
-});
 
-// const showMore = () => {
-//   let showMoreBlock = document.querySelectorAll('[data-showmore]');
-//   let showMoreButton = document.querySelector('#showMore');
-//   if (!showMoreButton) return;
-//   showMoreButton.addEventListener('click', function () {
-//     showMoreBlock.forEach((el) => {
-//       el.classList.toggle('_active');
-//     });
-//     this.classList.toggle('active');
-//     if (this.classList.contains('active')) {
-//       this.textContent = 'Скрыть';
-//     } else {
-//       this.textContent = 'Показать еще';
-//     }
-//   });
-// };
-// showMore();
+    //
+    for (let i = 0; i < value.length && i < numberLength; i++) {
+      switch (i) {
+        case 0:
+          result += prefixNumber(value[i]);
+          continue;
+        case 4:
+          result += ') ';
+          break;
+        case 7:
+          result += '-';
+          break;
+        case 9:
+          result += '-';
+          break;
+        default:
+          break;
+      }
+      result += value[i];
+    }
+    //
+    input.value = result;
+  });
+});
 
 const maps = () => {
   if (!document.querySelector('.map')) return;
@@ -103,8 +90,8 @@ const maps = () => {
 
     let mapPetersburg = new ymaps.Map('map_petersburg', {
       controls: [],
-      center: [60.043934, 30.489818],
-      zoom: 14,
+      center: [60.045844, 30.429834],
+      zoom: 12,
     });
 
     let moscowPlacemark = new ymaps.Placemark(
@@ -129,38 +116,51 @@ const maps = () => {
         iconContentOffset: [0, 0],
       },
     );
-    let ptPlacemark = new ymaps.Placemark(
-      [60.043934, 30.489818],
+    let ptPlacemark1 = new ymaps.Placemark(
+      [60.05909, 30.335029],
       {
         balloonContentHeader: 'Центральный офис',
-        balloonContentBody: 'Санкт-Петербург,Мурино, промзона мурино, круговой проезд 1',
+        balloonContentBody: 'Санкт-Петербург, проспект Энгельса 154, офис 467',
         balloonContentFooter: '8-800-250-23-60',
-        hideIconOnBalloonOpen: false,
+        hasBalloon: true,
+        hideIconOnBalloonOpen: true,
       },
       {
-        // Необходимо указать данный тип макета.
         iconLayout: 'default#imageWithContent',
-        // Своё изображение иконки метки.
         iconImageHref: '/wp-content/themes/lenro/assets/img/map.svg',
-        // Размеры метки.
         iconImageSize: [40, 40],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
         iconImageOffset: [-20, -20],
-        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [0, 0],
+      },
+    );
+    let ptPlacemark2 = new ymaps.Placemark(
+      [60.043929, 30.489818],
+      {
+        balloonContentHeader: 'Производственно-складской комплекс',
+        balloonContentBody: 'Производственная зона Мурино, Круговой проезд д.1',
+        balloonContentFooter: '8-800-250-23-60',
+        hasBalloon: true,
+        hideIconOnBalloonOpen: true,
+      },
+      {
+        iconLayout: 'default#imageWithContent',
+        iconImageHref: '/wp-content/themes/lenro/assets/img/map.svg',
+        iconImageSize: [40, 40],
+        iconImageOffset: [-20, -20],
         iconContentOffset: [0, 0],
       },
     );
 
     // myPlacemark.openBalloon()
     mapMoscow.geoObjects.add(moscowPlacemark);
-    mapPetersburg.geoObjects.add(ptPlacemark);
-
-    moscowPlacemark.balloon.open();
-    ptPlacemark.balloon.open();
+    mapPetersburg.geoObjects.add(ptPlacemark1);
+    mapPetersburg.geoObjects.add(ptPlacemark2);
 
     mapMoscow.behaviors.disable('scrollZoom');
     mapPetersburg.behaviors.disable('scrollZoom');
+
+    moscowPlacemark.balloon.open();
+    ptPlacemark1.balloon.open();
   }
 };
 maps();
@@ -191,49 +191,64 @@ menuLinks.forEach((link) => {
 const menuList = document.querySelector('.menu__list');
 menuList.setAttribute('data-spollers', 992);
 
-const formFunc = () => {
-  const formSubmitting = () => {
-    const elems = document.querySelectorAll('.wpcf7');
-    if (!elems.length) {
-      return false;
-    }
-    const forms = document.querySelectorAll('.wpcf7-form');
-    if (!forms.length) {
-      return false;
-    }
-
-    function _evtFormSubmit() {
-      this.disabled = true;
-      const submitBtn = this.querySelector('button[type="submit"]');
+const formSubmitting = () => {
+  let forms = document.querySelectorAll('.wpcf7');
+  forms.forEach((form) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.addEventListener('click', () => {
+      submitBtn.innerHTML = 'Подождите...';
       submitBtn.disabled = true;
-      submitBtn.setAttribute('data-default-text', submitBtn.innerText);
-      submitBtn.innerHTML = '<span>Подождите...</span>';
-    }
+    });
+    form.addEventListener(
+      'wpcf7mailsent',
+      (e) => {
+        console.log(e.detail);
+        submitBtn.innerHTML = 'Отправить';
+        submitBtn.disabled = false;
+        flsModules.popup.close('#productForm');
+        flsModules.popup.close('#callbackForm');
+        Toastify({
+          text: 'Заявка принята, спасибо!',
+          duration: 6000,
+          fontSize: 30,
+          gravity: 'top',
+          position: 'right',
+          style: {
+            background: '#d52628',
+          },
+          onClick: function () {},
+        }).showToast();
+      },
+      false,
+    );
+    form.addEventListener(
+      'wpcf7invalid',
+      () => {
+        submitBtn.innerHTML = 'Отправить';
+        submitBtn.disabled = false;
+      },
+      false,
+    );
+  });
+};
+formSubmitting();
 
-    function _evtSubmitSuccess(e) {
-      flsModules.popup.close('#productForm');
-      flsModules.popup.close('#callbackForm');
-      Toastify({
-        text: 'Заявка принята, спасибо!',
-        duration: 6000,
-        fontSize: 30,
-        gravity: 'top',
-        position: 'right',
-        style: {
-          background: '#d52628',
-        },
-        onClick: function () {},
-      }).showToast();
-    }
-
-    for (let i = forms.length - 1; i >= 0; i--) {
-      forms[i].addEventListener('submit', _evtFormSubmit, false);
-    }
-    for (let i = elems.length - 1; i >= 0; i--) {
-      elems[i].addEventListener('wpcf7submit', _evtSubmitSuccess, false);
-    }
-  };
-  formSubmitting();
+let scrollToTopButton = document.getElementById('scrollTopButton');
+window.onscroll = function () {
+  scrollFunction();
 };
 
-formFunc();
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    scrollToTopButton.classList.add('visible');
+  } else {
+    scrollToTopButton.classList.remove('visible');
+  }
+}
+
+scrollToTopButton.addEventListener('click', () => topFunction());
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

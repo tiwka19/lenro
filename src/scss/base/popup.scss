@@ -1,5 +1,5 @@
 body::after {
-  content: "";
+  content: '';
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100%;
@@ -13,6 +13,7 @@ body::after {
 }
 .popup-show body::after {
   opacity: 1;
+  z-index: 150;
 }
 .popup {
   position: fixed;
@@ -26,7 +27,7 @@ body::after {
   pointer-events: none;
 }
 .popup_show {
-  z-index: 150;
+  z-index: 151;
   visibility: visible;
   overflow: auto;
   pointer-events: auto;
@@ -73,7 +74,7 @@ body::after {
 .popup__title {
   text-align: center;
   font-weight: 500;
-  @include adaptiveValue("font-size", 28, 22);
+  @include adaptiveValue('font-size', 28, 22);
 }
 .popup__input-group {
   display: flex;

@@ -1,8 +1,33 @@
-.about-page {
+.page-about {
+  padding-bottom: rem(50);
   .about {
-    padding-top: rem(50);
-    padding-bottom: rem(50);
-    &__head {
+    &__title {
+      @include adaptiveValue('font-size', 46, 30);
+      line-height: math.div(56, 46);
+      margin-bottom: rem(15);
+    }
+    &__navigation {
+      padding: rem(15) rem(30);
+      background-color: #f4f4f4;
+      border-radius: rem(10);
+      margin-bottom: rem(15);
+    }
+    &__navigation-list {
+      display: flex;
+      align-items: center;
+      gap: rem(30);
+    }
+    &__navigation-item {
+      font-size: rem(20);
+      color: $redColor;
+      font-weight: 500;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #3f3f3f;
+        }
+      }
+    }
+    &__banner {
       position: relative;
       overflow: hidden;
       border-radius: rem(10);
@@ -24,7 +49,7 @@
         }
       }
     }
-    &__title {
+    &__banner-title {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -38,11 +63,11 @@
         text-align: center;
       }
     }
-    &__content {
+    &__box {
       h2 {
-        margin-bottom: rem(30);
+        margin-bottom: rem(15);
         @include adaptiveValue('font-size', 24, 20);
-        line-height: math.div(34, 24);
+        line-height: math.div(30, 24);
         font-weight: 500;
       }
       p {
@@ -52,7 +77,6 @@
       }
     }
     &__content-intro {
-      text-align: center;
       @include adaptiveValue('font-size', 22, 20);
       padding: rem(30) 0 rem(50) 0;
       line-height: math.div(30, 22);
@@ -66,6 +90,8 @@
       justify-content: space-between;
       align-items: center;
       gap: rem(30);
+      font-size: rem(18);
+      line-height: math.div(24, 18);
       @include adaptiveValue('margin-bottom', 60, 30);
       @media (max-width: $tablet) {
         flex-direction: column;
@@ -74,9 +100,6 @@
         object-fit: cover;
         max-width: 100%;
         border-radius: rem(13);
-      }
-      p {
-        font-size: rem(18);
       }
       &:last-child {
         @media (max-width: $tablet) {
@@ -129,8 +152,8 @@
         grid-template-columns: 1fr;
       }
     }
-
     &__benefits {
+      @include adaptiveValue('margin-bottom', 80, 40);
       &-wrapper {
         display: flex;
         gap: rem(30);
@@ -173,6 +196,45 @@
         img {
           max-width: 100%;
         }
+      }
+    }
+    &__mission {
+      margin-bottom: rem(60);
+    }
+    &__mission-title {
+      margin-bottom: rem(15);
+      @include adaptiveValue('font-size', 26, 20);
+      line-height: math.div(30, 26);
+      font-weight: 500;
+    }
+    &__mission-item {
+      margin-bottom: rem(30);
+      line-height: math.div(26, 30);
+    }
+    &__mission-description {
+      font-size: rem(18);
+      line-height: math.div(26, 18);
+    }
+
+    &__values-title {
+      margin-bottom: rem(30);
+      @include adaptiveValue('font-size', 26, 20);
+      line-height: math.div(30, 26);
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &__values-subtitle {
+      font-size: rem(22);
+      font-weight: 500;
+      margin-bottom: rem(15);
+    }
+    &__values-list {
+      padding-left: rem(25);
+    }
+    &__values-item {
+      list-style-type: decimal;
+      &:not(:last-child) {
+        margin-bottom: rem(15);
       }
     }
   }

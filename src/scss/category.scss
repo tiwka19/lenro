@@ -6,19 +6,29 @@
   &__subtitle {
     text-align: center;
     font-size: rem(24);
-    @include adaptiveValue('margin-bottom', 45, 20);
+    @include adaptiveValue('margin-bottom', 30, 20);
   }
   &__products {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     @include adaptiveValue('gap', 70, 30);
     padding-top: rem(30);
+    @include adaptiveValue('margin-bottom', 60, 30);
     @media (max-width: $tablet) {
       grid-template-columns: 1fr 1fr;
     }
     @media (max-width: $mobile) {
       grid-template-columns: 1fr;
     }
+  }
+
+  &__table-title {
+    @include adaptiveValue('font-size', 30, 22);
+    margin-bottom: rem(15);
+  }
+  &__table-subtitle {
+    font-size: rem(22);
+    margin-bottom: rem(30);
   }
 
   .product {
